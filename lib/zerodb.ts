@@ -6,11 +6,19 @@ class ZeroDBClient {
   private projectId: string;
 
   constructor() {
-    const baseURL = process.env.NEXT_PUBLIC_AINATIVE_API_URL!;
-    this.projectId = process.env.NEXT_PUBLIC_ZERODB_PROJECT_ID!;
+    // Support both client and server-side env vars
+    const baseURL = process.env.NEXT_PUBLIC_AINATIVE_API_URL ||
+                    process.env.AINATIVE_API_URL ||
+                    process.env.ZERODB_API_URL ||
+                    'https://api.ainative.studio';
+
+    this.projectId = process.env.NEXT_PUBLIC_ZERODB_PROJECT_ID || 'blaq-digital-prod';
+
+    // Ensure baseURL doesn't have trailing slash for proper URL construction
+    const cleanBaseURL = baseURL.replace(/\/$/, '');
 
     this.client = axios.create({
-      baseURL,
+      baseURL: cleanBaseURL,
       timeout: 30000,
       headers: {
         'Content-Type': 'application/json',
@@ -29,6 +37,10 @@ class ZeroDBClient {
         } else {
           config.headers['X-API-Key'] = this.apiKey;
         }
+      }
+      // Debug logging
+      if (process.env.NODE_ENV !== 'production') {
+        console.log(`[ZeroDB] ${config.method?.toUpperCase()} ${config.baseURL}${config.url}`);
       }
       return config;
     });
