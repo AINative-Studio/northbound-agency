@@ -210,11 +210,15 @@ async function seedKnowledgeBase() {
   console.log('Starting knowledge base seeding...\n');
 
   try {
+    // Load environment variables
+    require('dotenv').config();
+
     // Set API key from environment
-    const apiKey = process.env.NEXT_PUBLIC_AINATIVE_API_KEY;
+    const apiKey = process.env.NEXT_PUBLIC_AINATIVE_API_KEY || process.env.ZERODB_API_TOKEN;
     if (!apiKey) {
-      throw new Error('NEXT_PUBLIC_AINATIVE_API_KEY is not set');
+      throw new Error('NEXT_PUBLIC_AINATIVE_API_KEY or ZERODB_API_TOKEN is not set');
     }
+    console.log('API Key found:', apiKey.substring(0, 10) + '...');
     zerodb.setApiKey(apiKey);
 
     // Prepare vectors for upload
@@ -225,6 +229,8 @@ async function seedKnowledgeBase() {
     }));
 
     console.log(`Uploading ${vectors.length} knowledge base entries to ZeroDB...`);
+    console.log('Collection name: blaq_knowledge_base');
+    console.log('First vector sample:', JSON.stringify(vectors[0], null, 2));
 
     // Upload all vectors to the blaq_knowledge_base collection
     const result = await zerodb.upsertVectors('blaq_knowledge_base', vectors);
