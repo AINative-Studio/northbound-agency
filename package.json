@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3456",
     "build": "next build",
-    "start": "next start -p 3456",
+    "start": "next start -p ${PORT:-3000}",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "seed:kb": "tsx scripts/seed-knowledge-base.ts"
