@@ -33,19 +33,15 @@ export default function ContactPage() {
     setError('');
 
     try {
-      const { error: submitError } = await supabase
-        .from('contact_submissions')
-        .insert([
-          {
-            name: formData.name,
-            company: formData.company || null,
-            email: formData.email,
-            project_type: formData.projectType,
-            description: formData.description,
-          },
-        ]);
-
-      if (submitError) throw submitError;
+      // Store contact submission in ZeroDB
+      await zerodb.insertTable('contact_submissions', {
+        name: formData.name,
+        company: formData.company || null,
+        email: formData.email,
+        project_type: formData.projectType,
+        description: formData.description,
+        submitted_at: new Date().toISOString(),
+      });
 
       setIsSuccess(true);
       setFormData({

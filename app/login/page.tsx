@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Button } from '@/core/components/ui/button';
-import { Input } from '@/core/components/ui/input';
-import { Card, CardContent } from '@/core/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent } from '@/components/ui/card';
 import { Lock } from 'lucide-react';
 
 export default function LoginPage() {
