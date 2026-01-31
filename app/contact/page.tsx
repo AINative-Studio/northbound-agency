@@ -13,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { supabase } from '@/lib/supabase';
+import { zerodb } from '@/lib/zerodb';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

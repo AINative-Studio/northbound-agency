@@ -6,10 +6,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface Message {
   role: 'user' | 'assistant';
   content: string;
+  isStreaming?: boolean;
 }
 
 interface ChatbotProps {
@@ -39,6 +42,9 @@ export function Chatbot({ title = 'AI Assistant', type = 'chatbot', initialPromp
     setMessages((prev) => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
 
+    // Add placeholder for streaming message
+    setMessages((prev) => [...prev, { role: 'assistant', content: '', isStreaming: true }]);
+
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
@@ -49,12 +55,47 @@ export function Chatbot({ title = 'AI Assistant', type = 'chatbot', initialPromp
       if (!response.ok) throw new Error('Failed to get response');
 
       const data = await response.json();
-      setMessages((prev) => [...prev, { role: 'assistant', content: data.response }]);
+
+      // Simulate streaming effect by gradually revealing the content
+      const fullText = data.response;
+      const words = fullText.split(' ');
+      let currentText = '';
+
+      for (let i = 0; i < words.length; i++) {
+        currentText += (i > 0 ? ' ' : '') + words[i];
+        setMessages((prev) => {
+          const newMessages = [...prev];
+          newMessages[newMessages.length - 1] = {
+            role: 'assistant',
+            content: currentText,
+            isStreaming: i < words.length - 1
+          };
+          return newMessages;
+        });
+        // Small delay for streaming effect
+        await new Promise(resolve => setTimeout(resolve, 30));
+      }
+
+      // Mark streaming as complete
+      setMessages((prev) => {
+        const newMessages = [...prev];
+        newMessages[newMessages.length - 1] = {
+          role: 'assistant',
+          content: fullText,
+          isStreaming: false
+        };
+        return newMessages;
+      });
     } catch (error) {
-      setMessages((prev) => [
-        ...prev,
-        { role: 'assistant', content: 'Sorry, I encountered an error. Please try again.' },
-      ]);
+      setMessages((prev) => {
+        const newMessages = [...prev];
+        newMessages[newMessages.length - 1] = {
+          role: 'assistant',
+          content: 'Sorry, I encountered an error. Please try again.',
+          isStreaming: false
+        };
+        return newMessages;
+      });
     } finally {
       setIsLoading(false);
     }
@@ -101,14 +142,16 @@ export function Chatbot({ title = 'AI Assistant', type = 'chatbot', initialPromp
               )}
             </div>
           ) : (
-            <div className="space-y-4">
+            <div className="space-y-6">
               {messages.map((message, index) => (
                 <div
                   key={index}
-                  className={`flex gap-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                  className={`flex gap-3 ${
+                    message.role === 'user' ? 'justify-end' : 'justify-start'
+                  }`}
                 >
                   {message.role === 'assistant' && (
-                    <div className="flex-shrink-0 h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Bot className="h-4 w-4 text-primary" />
                     </div>
                   )}
@@ -116,31 +159,33 @@ export function Chatbot({ title = 'AI Assistant', type = 'chatbot', initialPromp
                     className={`rounded-lg px-4 py-3 max-w-[80%] ${
                       message.role === 'user'
                         ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted text-foreground'
+                        : 'bg-muted'
                     }`}
                   >
-                    <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</p>
+                    {message.role === 'assistant' ? (
+                      <div className="prose prose-sm dark:prose-invert max-w-none">
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                          {message.content}
+                        </ReactMarkdown>
+                        {message.isStreaming && (
+                          <span className="inline-block w-2 h-4 ml-1 bg-current animate-pulse" />
+                        )}
+                      </div>
+                    ) : (
+                      <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+                    )}
                   </div>
                   {message.role === 'user' && (
-                    <div className="flex-shrink-0 h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <User className="h-4 w-4 text-primary" />
+                    <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+                      <User className="h-4 w-4 text-primary-foreground" />
                     </div>
                   )}
                 </div>
               ))}
-              {isLoading && (
-                <div className="flex gap-3 justify-start">
-                  <div className="flex-shrink-0 h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Bot className="h-4 w-4 text-primary" />
-                  </div>
-                  <div className="rounded-lg px-4 py-3 bg-muted">
-                    <Loader2 className="h-4 w-4 animate-spin text-primary" />
-                  </div>
-                </div>
-              )}
             </div>
           )}
         </ScrollArea>
+
         <div className="border-t border-border/50 p-4">
           <form onSubmit={handleSubmit} className="flex gap-2">
             <Input
@@ -150,7 +195,7 @@ export function Chatbot({ title = 'AI Assistant', type = 'chatbot', initialPromp
               disabled={isLoading}
               className="flex-1"
             />
-            <Button type="submit" disabled={isLoading || !input.trim()} className="bg-primary hover:bg-primary/90">
+            <Button type="submit" disabled={isLoading || !input.trim()} size="icon">
               {isLoading ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
