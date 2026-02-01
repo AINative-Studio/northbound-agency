@@ -7,6 +7,7 @@ import { Footer } from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://blaq.ainative.studio'),
   title: 'Blaq Digital - AI-Native Digital Media Agency',
   description: 'Next-generation digital media and AI agency built at the intersection of entertainment, artificial intelligence, and Black culture. We build intelligent media systems.',
   openGraph: {

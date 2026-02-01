@@ -2,6 +2,23 @@ import Link from 'next/link';
 import { Brain, Code, Layers, ArrowRight, Sparkles, Zap, Target, MessageSquare, Cpu, BarChart3, Eye, Smartphone, Globe, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Services - AI & Digital Media Solutions | Blaq Digital',
+  description: 'AI-native digital media agency offering custom AI applications, modern web development, and intelligent media systems for entertainment companies.',
+  openGraph: {
+    title: 'Services - AI & Digital Media Solutions | Blaq Digital',
+    description: 'AI-native digital media agency offering custom AI applications, modern web development, and intelligent media systems for entertainment companies.',
+    url: 'https://blaq.ainative.studio/services',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Services - AI & Digital Media Solutions | Blaq Digital',
+    description: 'AI-native digital media agency offering custom AI applications, modern web development, and intelligent media systems for entertainment companies.',
+  },
+};
 
 const capabilities = [
   {
@@ -97,8 +114,99 @@ const services = [
 ];
 
 export default function ServicesPage() {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://blaq.ainative.studio/#organization',
+    name: 'Blaq Digital',
+    url: 'https://blaq.ainative.studio',
+    description: 'AI-native digital media agency building intelligent systems for media and entertainment companies',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Los Angeles',
+      addressRegion: 'CA',
+      addressCountry: 'US',
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://blaq.ainative.studio',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://blaq.ainative.studio/services',
+      },
+    ],
+  };
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': 'https://blaq.ainative.studio/services#professional-service',
+    name: 'Blaq Digital Services',
+    provider: {
+      '@id': 'https://blaq.ainative.studio/#organization',
+    },
+    serviceType: ['AI Application Development', 'Web Development', 'Media AI Systems'],
+    areaServed: 'US',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Digital Media & AI Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'AI App Development',
+            description: 'Custom AI applications, RAG systems, chatbots, and intelligent automation',
+            url: 'https://blaq.ainative.studio/services/ai-apps',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Web Development',
+            description: 'High-performance, modern web platforms built with Next.js and cutting-edge technologies',
+            url: 'https://blaq.ainative.studio/services/web-dev',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Media + AI Systems',
+            description: 'Intelligent media infrastructure for content discovery and audience engagement',
+            url: 'https://blaq.ainative.studio/services/media-ai',
+          },
+        },
+      ],
+    },
+  };
+
   return (
     <div className="flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <section className="relative overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-green-500/5 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">

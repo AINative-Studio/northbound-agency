@@ -2,6 +2,24 @@ import Link from 'next/link';
 import { Code, Zap, Globe, Smartphone, CheckCircle2, ArrowRight, Gauge } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Modern Web Development & Next.js Development Services | Blaq Digital',
+  description: 'High-performance web applications built with Next.js, React, and TypeScript. Modern web development with optimal performance, SEO, and scalability for media companies.',
+  keywords: ['Modern web development', 'Next.js development', 'React development', 'TypeScript', 'Web performance', 'Full-stack development'],
+  openGraph: {
+    title: 'Modern Web Development & Next.js Development Services | Blaq Digital',
+    description: 'High-performance web applications built with Next.js, React, and TypeScript. Modern web development with optimal performance, SEO, and scalability for media companies.',
+    url: 'https://blaq.ainative.studio/services/web-dev',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Modern Web Development & Next.js Development Services | Blaq Digital',
+    description: 'High-performance web applications built with Next.js, React, and TypeScript. Modern web development with optimal performance, SEO, and scalability for media companies.',
+  },
+};
 
 const capabilities = [
   {
@@ -47,8 +65,95 @@ const techStack = [
 ];
 
 export default function WebDevPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://blaq.ainative.studio',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://blaq.ainative.studio/services',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Web Development',
+        item: 'https://blaq.ainative.studio/services/web-dev',
+      },
+    ],
+  };
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': 'https://blaq.ainative.studio/services/web-dev#service',
+    name: 'Modern Web Development',
+    description: 'High-performance web platforms built with Next.js, React, and TypeScript. Full-stack development services including API-first architecture, performance optimization, and responsive design.',
+    provider: {
+      '@type': 'Organization',
+      '@id': 'https://blaq.ainative.studio/#organization',
+      name: 'Blaq Digital',
+    },
+    serviceType: 'Modern web development',
+    areaServed: 'US',
+    url: 'https://blaq.ainative.studio/services/web-dev',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Web Development Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Next.js Development',
+            description: 'Modern React applications with server-side rendering, API routes, and optimal performance',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Performance Optimization',
+            description: 'Lightning-fast load times, efficient code splitting, and optimal user experience',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'API-First Architecture',
+            description: 'Scalable backend systems that power web, mobile, and AI applications',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Responsive Design',
+            description: 'Beautiful interfaces that work seamlessly across all devices and screen sizes',
+          },
+        },
+      ],
+    },
+  };
+
   return (
     <div className="flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <section className="relative overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-green-500/5 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">

@@ -2,6 +2,24 @@ import Link from 'next/link';
 import { Layers, Film, Users, TrendingUp, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Media Production & AI Content Creation Services | Blaq Digital',
+  description: 'Transform media operations with AI-powered content discovery, automated tagging, and intelligent recommendation systems for studios, networks, and streaming platforms.',
+  keywords: ['AI media production', 'AI content creation', 'Media intelligence', 'Content recommendation', 'Audience analytics', 'Video AI'],
+  openGraph: {
+    title: 'AI Media Production & AI Content Creation Services | Blaq Digital',
+    description: 'Transform media operations with AI-powered content discovery, automated tagging, and intelligent recommendation systems for studios, networks, and streaming platforms.',
+    url: 'https://blaq.ainative.studio/services/media-ai',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Media Production & AI Content Creation Services | Blaq Digital',
+    description: 'Transform media operations with AI-powered content discovery, automated tagging, and intelligent recommendation systems for studios, networks, and streaming platforms.',
+  },
+};
 
 const capabilities = [
   {
@@ -57,8 +75,95 @@ const outcomes = [
 ];
 
 export default function MediaAIPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://blaq.ainative.studio',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://blaq.ainative.studio/services',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Media + AI Systems',
+        item: 'https://blaq.ainative.studio/services/media-ai',
+      },
+    ],
+  };
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': 'https://blaq.ainative.studio/services/media-ai#service',
+    name: 'Media + AI Systems',
+    description: 'Intelligent media infrastructure for studios, networks, and streaming platforms. AI-powered content discovery, automated metadata generation, recommendation engines, and audience analytics.',
+    provider: {
+      '@type': 'Organization',
+      '@id': 'https://blaq.ainative.studio/#organization',
+      name: 'Blaq Digital',
+    },
+    serviceType: 'AI media production',
+    areaServed: 'US',
+    url: 'https://blaq.ainative.studio/services/media-ai',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Media AI Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Conversational Media',
+            description: 'Transform static content into interactive, AI-powered experiences that engage audiences in new ways',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Content Intelligence',
+            description: 'Automated tagging, metadata generation, and content analysis powered by AI',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Audience Insights',
+            description: 'Understand your audience better with AI-driven analytics and behavioral intelligence',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Recommendation Systems',
+            description: 'Personalized content recommendations that increase engagement and viewing time',
+          },
+        },
+      ],
+    },
+  };
+
   return (
     <div className="flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <section className="relative overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-green-500/5 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">

@@ -1,7 +1,24 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Brain, Code, Heart, Target, Zap, Users, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+
+export const metadata: Metadata = {
+  title: 'About Blaq Digital | AI-Native Agency Leadership',
+  description: 'Meet the next-generation digital studio at the intersection of AI, entertainment, and Black culture. Expert team specializing in AI systems, engineering excellence, and cultural intelligence for media companies.',
+  openGraph: {
+    title: 'About Blaq Digital | AI-Native Agency Leadership',
+    description: 'Expert team specializing in AI systems, engineering excellence, and cultural intelligence for Black media companies and creators.',
+    type: 'website',
+    url: '/about',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Blaq Digital | AI-Native Agency Leadership',
+    description: 'Expert team specializing in AI systems, engineering excellence, and cultural intelligence for Black media companies and creators.',
+  },
+};
 
 const values = [
   {
@@ -35,8 +52,75 @@ const principles = [
 ];
 
 export default function AboutPage() {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Blaq Digital',
+    alternateName: 'Blaq Digital Studio',
+    url: 'https://blaq.ainative.studio',
+    logo: 'https://blaq.ainative.studio/logo.png',
+    description: 'Next-generation digital studio built at the intersection of artificial intelligence, entertainment, and Black culture. We build intelligent media systems for Black media companies and creators.',
+    foundingDate: '2024',
+    slogan: 'Building the future of media, entertainment, and culture through intelligent systems',
+    serviceArea: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: '40.7128',
+        longitude: '-74.0060',
+      },
+      geoRadius: 'global',
+    },
+    areaServed: {
+      '@type': 'Place',
+      name: 'Worldwide',
+    },
+    knowsAbout: [
+      'Artificial Intelligence',
+      'Machine Learning',
+      'Media Technology',
+      'Content Management Systems',
+      'RAG Systems',
+      'Natural Language Processing',
+      'Digital Media',
+      'Entertainment Technology',
+      'Black Media',
+      'Cultural Intelligence',
+    ],
+    makesOffer: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'AI-Powered Media Applications',
+          description: 'Custom AI applications for content discovery, recommendations, and audience engagement',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Intelligent Media Systems',
+          description: 'RAG-powered content systems, automated tagging, and semantic search solutions',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Full-Stack Development',
+          description: 'Production-grade web applications and digital products',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <section className="relative overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-green-500/5 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">

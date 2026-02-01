@@ -1,8 +1,25 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+
+export const metadata: Metadata = {
+  title: 'Our Work | AI Projects Portfolio - Blaq Digital',
+  description: 'Explore our portfolio of AI-powered media applications and intelligent systems. Case studies showcasing content discovery platforms, fan engagement solutions, and automated content intelligence for Black media companies.',
+  openGraph: {
+    title: 'Our Work | AI Projects Portfolio - Blaq Digital',
+    description: 'AI-powered media applications and intelligent systems. Real results for streaming platforms, studios, publishers, and creator networks.',
+    type: 'website',
+    url: '/work',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Work | AI Projects Portfolio - Blaq Digital',
+    description: 'AI-powered media applications and intelligent systems. Real results for streaming platforms, studios, publishers, and creator networks.',
+  },
+};
 
 const caseStudies = [
   {
@@ -48,8 +65,38 @@ const caseStudies = [
 ];
 
 export default function WorkPage() {
+  const portfolioSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: caseStudies.map((study, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'CreativeWork',
+        name: study.title,
+        description: study.solution,
+        creator: {
+          '@type': 'Organization',
+          name: 'Blaq Digital',
+          url: 'https://blaq.ainative.studio',
+        },
+        about: study.aiUsed,
+        keywords: [...study.techStack, 'AI', 'Artificial Intelligence', 'Media Technology'].join(', '),
+        image: study.image,
+        audience: {
+          '@type': 'Audience',
+          audienceType: study.client,
+        },
+      },
+    })),
+  };
+
   return (
     <div className="flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }}
+      />
       <section className="relative overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-green-500/5 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">

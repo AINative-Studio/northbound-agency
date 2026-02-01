@@ -1,8 +1,202 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { ArrowRight, Brain, Code, Sparkles, Zap, Target, Layers, MessageSquare, Shield, TrendingUp, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { VideoBackground } from '@/components/video-background';
+
+export const metadata: Metadata = {
+  title: 'Blaq Digital | AI-Native Digital Media Agency for Black Entertainment',
+  description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
+  keywords: [
+    'AI digital agency',
+    'Black-owned AI agency',
+    'AI development',
+    'RAG chatbots',
+    'custom AI applications',
+    'AI media systems',
+    'Black entertainment tech',
+    'conversational AI',
+    'AI-native agency',
+    'intelligent media platforms',
+    'Black media technology',
+    'AI consulting',
+    'machine learning development',
+    'AI entertainment solutions',
+    'Black-owned tech agency'
+  ],
+  openGraph: {
+    title: 'Blaq Digital | AI-Native Digital Media Agency for Black Entertainment',
+    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
+    url: 'https://blaq.ainative.studio',
+    siteName: 'Blaq Digital',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Blaq Digital - AI-Native Digital Media Agency'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blaq Digital | AI-Native Digital Media Agency for Black Entertainment',
+    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
+    images: ['/og-image.png'],
+    creator: '@blaqdigital',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://blaq.ainative.studio',
+  },
+};
+
+// JSON-LD Structured Data for SEO
+function StructuredData() {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Blaq Digital',
+    url: 'https://blaq.ainative.studio',
+    logo: 'https://blaq.ainative.studio/logo.png',
+    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
+    foundingDate: '2024',
+    founder: {
+      '@type': 'Person',
+      name: 'Blaq Digital Team'
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Customer Service',
+      email: 'hello@blaq.ainative.studio',
+      url: 'https://blaq.ainative.studio/contact'
+    },
+    sameAs: [
+      'https://twitter.com/blaqdigital',
+      'https://linkedin.com/company/blaq-digital'
+    ],
+    areaServed: {
+      '@type': 'Place',
+      name: 'Worldwide'
+    },
+    knowsAbout: [
+      'Artificial Intelligence',
+      'Machine Learning',
+      'RAG Chatbots',
+      'Custom AI Applications',
+      'Digital Media',
+      'Black Entertainment',
+      'Conversational AI',
+      'AI Development'
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'AI and Digital Media Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Custom AI Applications',
+            description: 'Custom AI applications built for your specific needs'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'RAG Chatbots',
+            description: 'Knowledge-grounded conversational interfaces'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Conversational Media',
+            description: 'Interactive content experiences powered by AI'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Web Platforms',
+            description: 'Modern, high-performance web applications'
+          }
+        }
+      ]
+    }
+  };
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': 'https://blaq.ainative.studio',
+    name: 'Blaq Digital',
+    image: 'https://blaq.ainative.studio/logo.png',
+    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
+    url: 'https://blaq.ainative.studio',
+    telephone: '+1-XXX-XXX-XXXX',
+    email: 'hello@blaq.ainative.studio',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US'
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '40.7128',
+      longitude: '-74.0060'
+    },
+    priceRange: '$$',
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday'
+      ],
+      opens: '09:00',
+      closes: '18:00'
+    },
+    sameAs: [
+      'https://twitter.com/blaqdigital',
+      'https://linkedin.com/company/blaq-digital'
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+    </>
+  );
+}
 
 const services = [
   {
@@ -53,6 +247,7 @@ const differentiators = [
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <StructuredData />
       <section className="relative overflow-hidden min-h-[600px] md:min-h-[700px] flex items-center">
         <div className="absolute inset-0 z-0">
           <VideoBackground />
