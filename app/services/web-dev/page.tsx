@@ -5,19 +5,19 @@ import { Card, CardContent } from '@/components/ui/card';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Modern Web Development & Next.js Development Services | Blaq Digital',
-  description: 'High-performance web applications built with Next.js, React, and TypeScript. Modern web development with optimal performance, SEO, and scalability for media companies.',
-  keywords: ['Modern web development', 'Next.js development', 'React development', 'TypeScript', 'Web performance', 'Full-stack development'],
+  title: 'AI-Native Web Development | Next.js, Python & FastAPI | Blaq Digital',
+  description: 'High-performance AI-powered web applications built with Next.js, Python, FastAPI, and ML frameworks. Full-stack development with PyTorch, TensorFlow, ZeroDB, and AIKit UI components.',
+  keywords: ['AI web development', 'Next.js development', 'Python FastAPI', 'PyTorch development', 'TensorFlow', 'ZeroDB', 'AIKit UI', 'ML web applications', 'Full-stack AI'],
   openGraph: {
-    title: 'Modern Web Development & Next.js Development Services | Blaq Digital',
-    description: 'High-performance web applications built with Next.js, React, and TypeScript. Modern web development with optimal performance, SEO, and scalability for media companies.',
+    title: 'AI-Native Web Development | Next.js, Python & FastAPI | Blaq Digital',
+    description: 'High-performance AI-powered web applications built with Next.js, Python, FastAPI, and ML frameworks. Full-stack development with PyTorch, TensorFlow, and ZeroDB.',
     url: 'https://blaq.ainative.studio/services/web-dev',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Modern Web Development & Next.js Development Services | Blaq Digital',
-    description: 'High-performance web applications built with Next.js, React, and TypeScript. Modern web development with optimal performance, SEO, and scalability for media companies.',
+    title: 'AI-Native Web Development | Next.js, Python & FastAPI',
+    description: 'High-performance AI-powered web applications built with Next.js, Python, FastAPI, PyTorch, TensorFlow, and ZeroDB vector database.',
   },
 };
 
@@ -47,21 +47,26 @@ const capabilities = [
 const features = [
   'Modern, component-driven architecture',
   'TypeScript for type safety and maintainability',
-  'Tailwind CSS for rapid, consistent styling',
+  'Python backend with FastAPI',
+  'ML/AI integration with PyTorch & TensorFlow',
+  'ZeroDB vector database for AI features',
+  'AIKit UI components for intelligent interfaces',
   'SEO optimization and meta tags',
   'Analytics and tracking integration',
   'Authentication and user management',
-  'Database design and integration',
   'CI/CD and deployment automation',
 ];
 
 const techStack = [
   { name: 'Next.js', category: 'Framework' },
-  { name: 'React', category: 'UI Library' },
+  { name: 'AIKit UI', category: 'UI Library' },
   { name: 'TypeScript', category: 'Language' },
-  { name: 'Tailwind CSS', category: 'Styling' },
-  { name: 'Supabase', category: 'Backend' },
-  { name: 'Vercel', category: 'Hosting' },
+  { name: 'Python', category: 'Backend Language' },
+  { name: 'FastAPI', category: 'API Framework' },
+  { name: 'ZeroDB', category: 'Vector Database' },
+  { name: 'PyTorch', category: 'ML Framework' },
+  { name: 'TensorFlow', category: 'ML Framework' },
+  { name: 'AINative Cloud', category: 'Hosting' },
 ];
 
 export default function WebDevPage() {
@@ -161,9 +166,9 @@ export default function WebDevPage() {
             <div className="h-16 w-16 rounded-xl bg-primary/10 flex items-center justify-center">
               <Code className="h-8 w-8 text-primary" />
             </div>
-            <h1>Web Development</h1>
+            <h1>AI-Native Web Development</h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl leading-relaxed">
-              High-performance web platforms built with modern technologies. We create fast, scalable applications that deliver exceptional user experiences and drive business results.
+              High-performance AI-powered web platforms built with Next.js, Python, and FastAPI. We create intelligent, scalable applications using PyTorch, TensorFlow, ZeroDB, and AIKit UI that deliver exceptional user experiences powered by machine learning.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg h-12 px-8">
               <Link href="/contact">
