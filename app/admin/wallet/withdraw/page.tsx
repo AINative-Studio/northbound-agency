@@ -21,6 +21,7 @@ export default function WithdrawPage() {
 
   useEffect(() => {
     fetchWallet();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchWallet = async () => {
