@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://blaq.ainative.studio'),
   title: 'Blaq Digital - AI-Native Digital Media Agency',
   description: 'Next-generation digital media and AI agency built at the intersection of entertainment, artificial intelligence, and Black culture. We build intelligent media systems.',
+  manifest: '/manifest.json',
   openGraph: {
     title: 'Blaq Digital - AI-Native Digital Media Agency',
     description: 'Building the future of media, entertainment, and culture through intelligent systems.',
