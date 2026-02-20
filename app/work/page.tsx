@@ -7,17 +7,48 @@ import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
   title: 'Our Work | AI Projects Portfolio - Blaq Digital',
-  description: 'Explore our portfolio of AI-powered media applications and intelligent systems. Case studies showcasing content discovery platforms, fan engagement solutions, and automated content intelligence for Black media companies.',
+  description: 'AI-powered media applications portfolio. Case studies showcasing RAG systems, content discovery, and intelligent automation for Black media.',
+  keywords: [
+    'AI portfolio',
+    'case studies',
+    'AI projects',
+    'RAG systems',
+    'content discovery',
+    'media technology portfolio',
+    'AI applications',
+    'Black media technology',
+    'intelligent systems',
+    'AI case studies',
+  ],
+  authors: [{ name: 'Blaq Digital', url: 'https://blaq.ainative.studio' }],
+  creator: 'Blaq Digital',
+  publisher: 'Blaq Digital',
+  category: 'Portfolio',
+  alternates: {
+    canonical: '/work',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'Our Work | AI Projects Portfolio - Blaq Digital',
     description: 'AI-powered media applications and intelligent systems. Real results for streaming platforms, studios, publishers, and creator networks.',
     type: 'website',
     url: '/work',
+    siteName: 'Blaq Digital',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Our Work | AI Projects Portfolio - Blaq Digital',
     description: 'AI-powered media applications and intelligent systems. Real results for streaming platforms, studios, publishers, and creator networks.',
+    creator: '@blaqdigital',
   },
 };
 

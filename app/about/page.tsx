@@ -6,17 +6,48 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'About Blaq Digital | AI-Native Agency Leadership',
-  description: 'Meet the next-generation digital studio at the intersection of AI, entertainment, and Black culture. Expert team specializing in AI systems, engineering excellence, and cultural intelligence for media companies.',
+  description: 'AI-native digital studio at the intersection of AI, entertainment, and Black culture. Expert team for media companies and creators.',
+  keywords: [
+    'AI agency',
+    'Black media',
+    'artificial intelligence',
+    'media technology',
+    'entertainment technology',
+    'RAG systems',
+    'content intelligence',
+    'cultural intelligence',
+    'AI-native studio',
+    'Black culture',
+  ],
+  authors: [{ name: 'Blaq Digital', url: 'https://blaq.ainative.studio' }],
+  creator: 'Blaq Digital',
+  publisher: 'Blaq Digital',
+  category: 'Technology',
+  alternates: {
+    canonical: '/about',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'About Blaq Digital | AI-Native Agency Leadership',
     description: 'Expert team specializing in AI systems, engineering excellence, and cultural intelligence for Black media companies and creators.',
     type: 'website',
     url: '/about',
+    siteName: 'Blaq Digital',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About Blaq Digital | AI-Native Agency Leadership',
     description: 'Expert team specializing in AI systems, engineering excellence, and cultural intelligence for Black media companies and creators.',
+    creator: '@blaqdigital',
   },
 };
 
