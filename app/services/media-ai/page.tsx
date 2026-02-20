@@ -6,18 +6,18 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Media Production & AI Content Creation Services | Blaq Digital',
-  description: 'Transform media operations with AI-powered content discovery, automated tagging, and intelligent recommendation systems for studios, networks, and streaming platforms.',
+  description: 'AI-powered content discovery, automated tagging, and intelligent recommendations for studios, networks, and streaming platforms.',
   keywords: ['AI media production', 'AI content creation', 'Media intelligence', 'Content recommendation', 'Audience analytics', 'Video AI'],
   openGraph: {
     title: 'AI Media Production & AI Content Creation Services | Blaq Digital',
-    description: 'Transform media operations with AI-powered content discovery, automated tagging, and intelligent recommendation systems for studios, networks, and streaming platforms.',
+    description: 'AI-powered content discovery, automated tagging, and intelligent recommendations for studios, networks, and streaming platforms.',
     url: 'https://blaq.ainative.studio/services/media-ai',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Media Production & AI Content Creation Services | Blaq Digital',
-    description: 'Transform media operations with AI-powered content discovery, automated tagging, and intelligent recommendation systems for studios, networks, and streaming platforms.',
+    description: 'AI-powered content discovery, automated tagging, and intelligent recommendations for studios, networks, and streaming platforms.',
   },
 };
 

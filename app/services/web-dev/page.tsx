@@ -6,18 +6,18 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI-Native Web Development | Next.js, Python & FastAPI | Blaq Digital',
-  description: 'High-performance AI-powered web applications built with Next.js, Python, FastAPI, and ML frameworks. Full-stack development with PyTorch, TensorFlow, ZeroDB, and AIKit UI components.',
+  description: 'AI web apps with Next.js, Python, FastAPI, PyTorch, TensorFlow, and ZeroDB. Full-stack intelligent solutions.',
   keywords: ['AI web development', 'Next.js development', 'Python FastAPI', 'PyTorch development', 'TensorFlow', 'ZeroDB', 'AIKit UI', 'ML web applications', 'Full-stack AI'],
   openGraph: {
     title: 'AI-Native Web Development | Next.js, Python & FastAPI | Blaq Digital',
-    description: 'High-performance AI-powered web applications built with Next.js, Python, FastAPI, and ML frameworks. Full-stack development with PyTorch, TensorFlow, and ZeroDB.',
+    description: 'AI web apps with Next.js, Python, FastAPI, PyTorch, TensorFlow, and ZeroDB. Full-stack intelligent solutions.',
     url: 'https://blaq.ainative.studio/services/web-dev',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI-Native Web Development | Next.js, Python & FastAPI',
-    description: 'High-performance AI-powered web applications built with Next.js, Python, FastAPI, PyTorch, TensorFlow, and ZeroDB vector database.',
+    description: 'AI web apps with Next.js, Python, FastAPI, PyTorch, TensorFlow, and ZeroDB. Full-stack intelligent solutions.',
   },
 };
 
