@@ -1,8 +1,28 @@
-import { MetadataRoute } from 'next'
+/**
+ * Dynamic Sitemap Generation for Blaq Digital
+ *
+ * Generates XML sitemap for SEO optimization
+ * Accessible at: https://blaq.ainative.studio/sitemap.xml
+ *
+ * Priority Guidelines:
+ * - 1.0: Homepage (highest priority)
+ * - 0.9: Main service pages
+ * - 0.8: Service sub-pages, about page
+ * - 0.7: Work portfolio, demos
+ * - 0.6: Contact page
+ *
+ * Change Frequency Guidelines:
+ * - weekly: Dynamic content (home, work, demos)
+ * - monthly: Static content (about, services, contact)
+ *
+ * Built by AINative
+ */
+
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://blaq.ainative.studio'
-  const lastModified = new Date()
+  const baseUrl = 'https://blaq.ainative.studio';
+  const lastModified = new Date();
 
   return [
     {
@@ -59,5 +79,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-  ]
+  ];
 }

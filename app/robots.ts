@@ -20,11 +20,11 @@ const BASE_URL = 'https://blaq.ainative.studio'
  * Routes that should be blocked from search engine indexing
  * These are sensitive or internal routes that should not appear in search results
  */
-const BLOCKED_ROUTES = [
+const BLOCKED_ROUTES: string[] = [
   '/api/',      // API endpoints
   '/admin/',    // Admin dashboard
   '/login/',    // Authentication pages
-] as const
+]
 
 /**
  * Generates the robots.txt configuration
