@@ -117,9 +117,40 @@ async function generateResponse(message: string, type: string): Promise<{
   hasRelevantContent: boolean;
   sources?: SemanticSearchResult[];
 }> {
-  // For now, use keyword-based fallback as semantic search requires seeded knowledge base
-  // TODO: Seed knowledge base using /v1/public/zerodb/{project_id}/embeddings/embed-and-store
+  // Try RAG system first (semantic search + chat completion)
+  console.log('[RAG] Processing query:', message);
 
+  const searchResults = await semanticSearch(message, 3);
+
+  if (searchResults && searchResults.total_results > 0) {
+    console.log(`[RAG] Found ${searchResults.total_results} relevant results`);
+
+    // Build context from search results
+    const context = searchResults.results
+      .map((result, index) => {
+        const metadata = result.metadata ? ` (${result.metadata.topic || 'general'})` : '';
+        return `[Source ${index + 1}${metadata}]:\n${result.text}`;
+      })
+      .join('\n\n');
+
+    // Generate AI response using the context
+    const aiResponse = await generateChatCompletion(message, context);
+
+    if (aiResponse) {
+      console.log('[RAG] Successfully generated AI response');
+      return {
+        response: aiResponse,
+        hasRelevantContent: true,
+        sources: searchResults.results,
+      };
+    } else {
+      console.warn('[RAG] Chat completion failed, falling back to keyword matching');
+    }
+  } else {
+    console.log('[RAG] No semantic search results, falling back to keyword matching');
+  }
+
+  // Fallback to keyword-based responses if RAG fails
   const messageLower = message.toLowerCase();
 
   // Knowledge base responses (simulating semantic search results)
