@@ -213,30 +213,67 @@ async function seedKnowledgeBase() {
     // Load environment variables
     require('dotenv').config();
 
-    // Set API key from environment
+    // Get configuration
     const apiKey = process.env.NEXT_PUBLIC_AINATIVE_API_KEY || process.env.ZERODB_API_TOKEN;
+    const apiUrl = process.env.NEXT_PUBLIC_AINATIVE_API_URL || 'https://api.ainative.studio';
+    const projectId = process.env.NEXT_PUBLIC_ZERODB_PROJECT_ID;
+
     if (!apiKey) {
       throw new Error('NEXT_PUBLIC_AINATIVE_API_KEY or ZERODB_API_TOKEN is not set');
     }
-    console.log('API Key found:', apiKey.substring(0, 10) + '...');
-    zerodb.setApiKey(apiKey);
 
-    // Prepare vectors for upload
-    const vectors = knowledgeBase.map(item => ({
+    if (!projectId) {
+      throw new Error('NEXT_PUBLIC_ZERODB_PROJECT_ID is not set. Run: npm run setup:zerodb');
+    }
+
+    console.log('API Key found:', apiKey.substring(0, 10) + '...');
+    console.log('Project ID:', projectId);
+    console.log('API URL:', apiUrl);
+
+    // Prepare data for embedding
+    const texts = knowledgeBase.map(item => item.text);
+    const metadataList = knowledgeBase.map(item => ({
+      ...item.metadata,
       id: item.id,
-      text: item.text,
-      metadata: item.metadata
+      title: item.id.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())
     }));
 
-    console.log(`Uploading ${vectors.length} knowledge base entries to ZeroDB...`);
-    console.log('Collection name: northbound_knowledge_base');
-    console.log('First vector sample:', JSON.stringify(vectors[0], null, 2));
+    console.log(`\nEmbedding and storing ${texts.length} knowledge base entries...`);
+    console.log('Namespace: northbound_knowledge_base');
+    console.log('Model: BAAI/bge-small-en-v1.5');
 
-    // Upload all vectors to the northbound_knowledge_base collection
-    const result = await zerodb.upsertVectors('northbound_knowledge_base', vectors);
+    // Use the embed-and-store endpoint
+    const response = await fetch(
+      `${apiUrl}/v1/public/zerodb/${projectId}/embeddings/embed-and-store`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${apiKey}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          texts,
+          metadata_list: metadataList,
+          namespace: 'northbound_knowledge_base',
+          model: 'BAAI/bge-small-en-v1.5'
+        })
+      }
+    );
+
+    if (!response.ok) {
+      const errorData = await response.text();
+      throw new Error(`API Error (${response.status}): ${errorData}`);
+    }
+
+    const result = await response.json();
 
     console.log('\n✅ Knowledge base seeded successfully!');
-    console.log(`Response:`, JSON.stringify(result, null, 2));
+    console.log(`   • Vectors stored: ${result.vectors_stored}`);
+    console.log(`   • Embeddings generated: ${result.embeddings_generated}`);
+    console.log(`   • Model: ${result.model}`);
+    console.log(`   • Dimensions: ${result.dimensions}`);
+    console.log(`   • Namespace: ${result.namespace}`);
+    console.log(`   • Processing time: ${result.processing_time_ms}ms`);
 
   } catch (error: any) {
     console.error('\n❌ Error seeding knowledge base:', error.message);

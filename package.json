@@ -11,6 +11,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "setup:zerodb": "tsx scripts/setup-zerodb-project.ts",
     "seed:kb": "tsx scripts/seed-knowledge-base.ts"
   },
   "dependencies": {

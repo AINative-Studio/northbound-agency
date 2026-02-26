@@ -24,9 +24,9 @@ export async function POST(request: NextRequest) {
 
     try {
       const authResponse = await axios.post(
-        `${apiUrl}/v1/auth/login`,
+        `${apiUrl}/v1/public/auth/login-json`,
         {
-          username,
+          email: username, // API uses 'email' field
           password,
         },
         {
