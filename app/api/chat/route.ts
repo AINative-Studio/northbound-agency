@@ -277,6 +277,14 @@ We work in agile sprints and aim for early value delivery - you'll see working p
 - **Atlanta Office**: Ground operations in a major entertainment hub
 
 We combine deep technical expertise with a culture-first philosophy, treating every project like our own product. We work with clients globally.`,
+
+    'founder': `Northbound Studios was founded by **Jerome Palencia** on January 1, 2026.
+
+Jerome Palencia is the founder and CEO of Northbound Studios. Under his leadership, the company operates as a Tech-Enabled Growth Studio based in San Francisco, California.
+
+The company is located at **845 Howard St, San Francisco, CA 94103, United States**.
+
+Jerome's vision is to build AI-powered growth systems that help modern businesses attract demand, convert traffic, and scale revenue through intelligent infrastructure. The company operates at the intersection of AI systems, performance marketing, conversion architecture, and strategic media production.`,
   };
 
   // Find the best match with improved keyword matching
@@ -305,6 +313,13 @@ We combine deep technical expertise with a culture-first philosophy, treating ev
     'reach': 'contact',
     'email': 'contact',
     'phone': 'contact',
+    'founder': 'founder',
+    'ceo': 'founder',
+    'jerome': 'founder',
+    'jerome palencia': 'founder',
+    'who founded': 'founder',
+    'who started': 'founder',
+    'who created': 'founder',
     'team': 'team',
     'who': 'team',
     'people': 'team',
