@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes the AINative authentication middleware implementation for the Blaq Digital application. The authentication system uses cookie-based session management to protect administrative routes and API endpoints.
+This document describes the AINative authentication middleware implementation for the Northbound Studio application. The authentication system uses cookie-based session management to protect administrative routes and API endpoints.
 
 ## Architecture
 

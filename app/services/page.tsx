@@ -5,17 +5,18 @@ import { Card, CardContent } from '@/components/ui/card';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Services - AI & Digital Media Solutions | Blaq Digital',
+  title: 'Services - AI & Digital Media Solutions | Northbound Studio',
   description: 'AI-native digital media agency offering custom AI applications, modern web development, and intelligent media systems for entertainment companies.',
+  keywords: ['AI services', 'Digital media agency', 'AI application development', 'Web development services', 'Media AI systems', 'Enterprise AI', 'Custom AI solutions', 'AI consulting'],
   openGraph: {
-    title: 'Services - AI & Digital Media Solutions | Blaq Digital',
+    title: 'Services - AI & Digital Media Solutions | Northbound Studio',
     description: 'AI-native digital media agency offering custom AI applications, modern web development, and intelligent media systems for entertainment companies.',
-    url: 'https://blaq.ainative.studio/services',
+    url: 'https://northboundstudio.co/services',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Services - AI & Digital Media Solutions | Blaq Digital',
+    title: 'Services - AI & Digital Media Solutions | Northbound Studio',
     description: 'AI-native digital media agency offering custom AI applications, modern web development, and intelligent media systems for entertainment companies.',
   },
 };
@@ -117,9 +118,9 @@ export default function ServicesPage() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': 'https://blaq.ainative.studio/#organization',
-    name: 'Blaq Digital',
-    url: 'https://blaq.ainative.studio',
+    '@id': 'https://northboundstudio.co/#organization',
+    name: 'Northbound Studio',
+    url: 'https://northboundstudio.co',
     description: 'AI-native digital media agency building intelligent systems for media and entertainment companies',
     address: {
       '@type': 'PostalAddress',
@@ -137,13 +138,13 @@ export default function ServicesPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://blaq.ainative.studio',
+        item: 'https://northboundstudio.co',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Services',
-        item: 'https://blaq.ainative.studio/services',
+        item: 'https://northboundstudio.co/services',
       },
     ],
   };
@@ -151,10 +152,10 @@ export default function ServicesPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    '@id': 'https://blaq.ainative.studio/services#professional-service',
-    name: 'Blaq Digital Services',
+    '@id': 'https://northboundstudio.co/services#professional-service',
+    name: 'Northbound Studio Services',
     provider: {
-      '@id': 'https://blaq.ainative.studio/#organization',
+      '@id': 'https://northboundstudio.co/#organization',
     },
     serviceType: ['AI Application Development', 'Web Development', 'Media AI Systems'],
     areaServed: 'US',
@@ -168,7 +169,7 @@ export default function ServicesPage() {
             '@type': 'Service',
             name: 'AI App Development',
             description: 'Custom AI applications, RAG systems, chatbots, and intelligent automation',
-            url: 'https://blaq.ainative.studio/services/ai-apps',
+            url: 'https://northboundstudio.co/services/ai-apps',
           },
         },
         {
@@ -177,7 +178,7 @@ export default function ServicesPage() {
             '@type': 'Service',
             name: 'Web Development',
             description: 'High-performance, modern web platforms built with Next.js and cutting-edge technologies',
-            url: 'https://blaq.ainative.studio/services/web-dev',
+            url: 'https://northboundstudio.co/services/web-dev',
           },
         },
         {
@@ -186,7 +187,7 @@ export default function ServicesPage() {
             '@type': 'Service',
             name: 'Media + AI Systems',
             description: 'Intelligent media infrastructure for content discovery and audience engagement',
-            url: 'https://blaq.ainative.studio/services/media-ai',
+            url: 'https://northboundstudio.co/services/media-ai',
           },
         },
       ],

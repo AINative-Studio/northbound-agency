@@ -93,7 +93,7 @@ describe('robots.ts', () => {
     });
 
     it('should use the correct domain', () => {
-      expect(robotsConfig.sitemap).toContain('blaq.ainative.studio');
+      expect(robotsConfig.sitemap).toContain('northboundstudio.co');
     });
 
     it('should use HTTPS protocol', () => {

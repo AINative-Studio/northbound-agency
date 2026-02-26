@@ -5,18 +5,18 @@ import { Card, CardContent } from '@/components/ui/card';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Media Production & AI Content Creation Services | Blaq Digital',
+  title: 'AI Media Production & AI Content Creation Services | Northbound Studio',
   description: 'AI-powered content discovery, automated tagging, and intelligent recommendations for studios, networks, and streaming platforms.',
   keywords: ['AI media production', 'AI content creation', 'Media intelligence', 'Content recommendation', 'Audience analytics', 'Video AI'],
   openGraph: {
-    title: 'AI Media Production & AI Content Creation Services | Blaq Digital',
+    title: 'AI Media Production & AI Content Creation Services | Northbound Studio',
     description: 'AI-powered content discovery, automated tagging, and intelligent recommendations for studios, networks, and streaming platforms.',
-    url: 'https://blaq.ainative.studio/services/media-ai',
+    url: 'https://northboundstudio.co/services/media-ai',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Media Production & AI Content Creation Services | Blaq Digital',
+    title: 'AI Media Production & AI Content Creation Services | Northbound Studio',
     description: 'AI-powered content discovery, automated tagging, and intelligent recommendations for studios, networks, and streaming platforms.',
   },
 };
@@ -83,19 +83,19 @@ export default function MediaAIPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://blaq.ainative.studio',
+        item: 'https://northboundstudio.co',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Services',
-        item: 'https://blaq.ainative.studio/services',
+        item: 'https://northboundstudio.co/services',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'Media + AI Systems',
-        item: 'https://blaq.ainative.studio/services/media-ai',
+        item: 'https://northboundstudio.co/services/media-ai',
       },
     ],
   };
@@ -103,17 +103,17 @@ export default function MediaAIPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    '@id': 'https://blaq.ainative.studio/services/media-ai#service',
+    '@id': 'https://northboundstudio.co/services/media-ai#service',
     name: 'Media + AI Systems',
     description: 'Intelligent media infrastructure for studios, networks, and streaming platforms. AI-powered content discovery, automated metadata generation, recommendation engines, and audience analytics.',
     provider: {
       '@type': 'Organization',
-      '@id': 'https://blaq.ainative.studio/#organization',
-      name: 'Blaq Digital',
+      '@id': 'https://northboundstudio.co/#organization',
+      name: 'Northbound Studio',
     },
     serviceType: 'AI media production',
     areaServed: 'US',
-    url: 'https://blaq.ainative.studio/services/media-ai',
+    url: 'https://northboundstudio.co/services/media-ai',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Media AI Services',

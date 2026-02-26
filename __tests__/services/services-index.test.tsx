@@ -9,7 +9,7 @@ describe('Services Index Page - Metadata', () => {
     });
 
     it('should have correct page title', () => {
-      expect(metadata.title).toBe('Services - AI & Digital Media Solutions | Blaq Digital');
+      expect(metadata.title).toBe('Services - AI & Digital Media Solutions | Northbound Studio');
     });
 
     it('should have comprehensive meta description', () => {
@@ -25,7 +25,7 @@ describe('Services Index Page - Metadata', () => {
     });
 
     it('should have correct OpenGraph title', () => {
-      expect(metadata.openGraph?.title).toBe('Services - AI & Digital Media Solutions | Blaq Digital');
+      expect(metadata.openGraph?.title).toBe('Services - AI & Digital Media Solutions | Northbound Studio');
     });
 
     it('should have OpenGraph description', () => {
@@ -33,7 +33,7 @@ describe('Services Index Page - Metadata', () => {
     });
 
     it('should have correct OpenGraph URL', () => {
-      expect(metadata.openGraph?.url).toBe('https://blaq.ainative.studio/services');
+      expect(metadata.openGraph?.url).toBe('https://northboundstudio.co/services');
     });
 
     it('should have OpenGraph type set to website', () => {
@@ -70,7 +70,7 @@ describe('Services Index Page - Schema.org Markup', () => {
       const scripts = document.querySelectorAll('script[type="application/ld+json"]');
       const orgScript = Array.from(scripts).find(script => {
         const content = script.textContent;
-        return content?.includes('Organization') && content?.includes('Blaq Digital');
+        return content?.includes('Organization') && content?.includes('Northbound Studio');
       });
 
       expect(orgScript).toBeDefined();
@@ -80,14 +80,14 @@ describe('Services Index Page - Schema.org Markup', () => {
       const scripts = document.querySelectorAll('script[type="application/ld+json"]');
       const orgScript = Array.from(scripts).find(script => {
         const content = script.textContent;
-        return content?.includes('Organization') && content?.includes('Blaq Digital');
+        return content?.includes('Organization') && content?.includes('Northbound Studio');
       });
 
       if (orgScript && orgScript.textContent) {
         const schema = JSON.parse(orgScript.textContent);
         expect(schema['@type']).toBe('Organization');
-        expect(schema.name).toBe('Blaq Digital');
-        expect(schema.url).toBe('https://blaq.ainative.studio');
+        expect(schema.name).toBe('Northbound Studio');
+        expect(schema.url).toBe('https://northboundstudio.co');
       }
     });
   });
@@ -140,7 +140,7 @@ describe('Services Index Page - Schema.org Markup', () => {
       if (serviceScript && serviceScript.textContent) {
         const schema = JSON.parse(serviceScript.textContent);
         expect(schema['@type']).toBe('ProfessionalService');
-        expect(schema.name).toBe('Blaq Digital Services');
+        expect(schema.name).toBe('Northbound Studio Services');
       }
     });
 
@@ -173,7 +173,7 @@ describe('Services Index Page - Schema.org Markup', () => {
           (item: any) => item.itemOffered.name === 'AI App Development'
         );
         expect(aiAppService).toBeDefined();
-        expect(aiAppService.itemOffered.url).toBe('https://blaq.ainative.studio/services/ai-apps');
+        expect(aiAppService.itemOffered.url).toBe('https://northboundstudio.co/services/ai-apps');
       }
     });
 
@@ -190,7 +190,7 @@ describe('Services Index Page - Schema.org Markup', () => {
           (item: any) => item.itemOffered.name === 'Web Development'
         );
         expect(webDevService).toBeDefined();
-        expect(webDevService.itemOffered.url).toBe('https://blaq.ainative.studio/services/web-dev');
+        expect(webDevService.itemOffered.url).toBe('https://northboundstudio.co/services/web-dev');
       }
     });
 
@@ -207,7 +207,7 @@ describe('Services Index Page - Schema.org Markup', () => {
           (item: any) => item.itemOffered.name === 'Media + AI Systems'
         );
         expect(mediaAIService).toBeDefined();
-        expect(mediaAIService.itemOffered.url).toBe('https://blaq.ainative.studio/services/media-ai');
+        expect(mediaAIService.itemOffered.url).toBe('https://northboundstudio.co/services/media-ai');
       }
     });
   });

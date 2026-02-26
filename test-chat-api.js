@@ -15,7 +15,7 @@ async function testChatAPI() {
     // Test 1: Send a chat message
     console.log('Test 1: Sending chat message...');
     const chatResponse = await axios.post(`${BASE_URL}/api/chat`, {
-      message: 'What services does Blaq Digital offer?',
+      message: 'What services does Northbound Studio offer?',
       type: 'chatbot'
     });
 

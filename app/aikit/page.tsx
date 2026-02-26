@@ -49,7 +49,7 @@ export default function AIKitPage() {
           <div className="max-w-5xl mx-auto text-center space-y-8">
             <div className="space-y-4">
               <Badge variant="secondary" className="mb-4">
-                Blaq Digital in Partnership with AINative
+                Northbound Studio in Partnership with AINative
               </Badge>
               <h1 className="text-gradient">AI Kit</h1>
               <p className="text-2xl md:text-3xl font-semibold text-foreground">
@@ -228,7 +228,7 @@ function Chat() {
             </div>
             <div className="pt-12 flex items-center justify-center gap-2 text-sm text-muted-foreground">
               <span>Built by</span>
-              <span className="font-semibold text-foreground">Blaq Digital in Partnership with AINative Studio</span>
+              <span className="font-semibold text-foreground">Northbound Studio in Partnership with AINative Studio</span>
             </div>
           </div>
         </div>

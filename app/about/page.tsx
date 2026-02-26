@@ -5,23 +5,28 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata: Metadata = {
-  title: 'About Blaq Digital | AI-Native Agency Leadership',
-  description: 'AI-native digital studio at the intersection of AI, entertainment, and Black culture. Expert team for media companies and creators.',
+  title: 'About Northbound Studio | AI-Native Agency Leadership & Expert Team',
+  description: 'Meet the AI-native digital studio at the intersection of AI, entertainment, and Black culture. Expert team in machine learning, RAG systems, full-stack development, and cultural intelligence serving media companies and creators worldwide.',
   keywords: [
-    'AI agency',
-    'Black media',
-    'artificial intelligence',
-    'media technology',
-    'entertainment technology',
-    'RAG systems',
-    'content intelligence',
-    'cultural intelligence',
+    'AI agency team',
+    'AI experts',
+    'machine learning engineers',
+    'RAG system specialists',
+    'Black media technology',
+    'artificial intelligence consulting',
+    'media technology experts',
+    'entertainment technology team',
+    'AI engineering excellence',
+    'content intelligence specialists',
+    'cultural intelligence AI',
     'AI-native studio',
-    'Black culture',
+    'Black culture technology',
+    'AI development team',
+    'digital transformation experts',
   ],
-  authors: [{ name: 'Blaq Digital', url: 'https://blaq.ainative.studio' }],
-  creator: 'Blaq Digital',
-  publisher: 'Blaq Digital',
+  authors: [{ name: 'Northbound Studio', url: 'https://northboundstudio.co' }],
+  creator: 'Northbound Studio',
+  publisher: 'Northbound Studio',
   category: 'Technology',
   alternates: {
     canonical: '/about',
@@ -37,17 +42,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'About Blaq Digital | AI-Native Agency Leadership',
-    description: 'Expert team specializing in AI systems, engineering excellence, and cultural intelligence for Black media companies and creators.',
+    title: 'About Northbound Studio | AI-Native Agency Leadership & Expert Team',
+    description: 'Expert team specializing in AI systems engineering, RAG development, full-stack development, and cultural intelligence for Black media companies and creators. Building the future of intelligent media.',
     type: 'website',
     url: '/about',
-    siteName: 'Blaq Digital',
+    siteName: 'Northbound Studio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Blaq Digital | AI-Native Agency Leadership',
-    description: 'Expert team specializing in AI systems, engineering excellence, and cultural intelligence for Black media companies and creators.',
-    creator: '@blaqdigital',
+    title: 'About Northbound Studio | AI-Native Agency Leadership & Expert Team',
+    description: 'Expert team specializing in AI systems engineering, RAG development, full-stack development, and cultural intelligence for Black media companies and creators.',
+    creator: '@northboundstudio',
   },
 };
 
@@ -86,29 +91,60 @@ export default function AboutPage() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Blaq Digital',
-    alternateName: 'Blaq Digital Studio',
-    url: 'https://blaq.ainative.studio',
-    logo: 'https://blaq.ainative.studio/logo.png',
+    '@id': 'https://northboundstudio.co/#organization',
+    name: 'Northbound Studio',
+    alternateName: 'Northbound Studio Studio',
+    url: 'https://northboundstudio.co',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://northboundstudio.co/logo.png',
+      width: '600',
+      height: '600',
+    },
+    image: 'https://northboundstudio.co/logo.png',
     description: 'Next-generation digital studio built at the intersection of artificial intelligence, entertainment, and Black culture. We build intelligent media systems for Black media companies and creators.',
     foundingDate: '2024',
     slogan: 'Building the future of media, entertainment, and culture through intelligent systems',
-    serviceArea: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: '40.7128',
-        longitude: '-74.0060',
+    email: 'hello@ainative.studio',
+    sameAs: [
+      'https://twitter.com/northboundstudio',
+      'https://linkedin.com/company/northbound-studio',
+      'https://github.com/northboundstudio',
+      'https://instagram.com/northboundstudio',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Business Inquiries',
+      email: 'hello@ainative.studio',
+      availableLanguage: ['English'],
+      areaServed: 'Worldwide',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'ZA',
+      addressRegion: 'Global Operations',
+    },
+    areaServed: [
+      {
+        '@type': 'Place',
+        name: 'Worldwide',
       },
-      geoRadius: 'global',
-    },
-    areaServed: {
-      '@type': 'Place',
-      name: 'Worldwide',
-    },
+      {
+        '@type': 'Country',
+        name: 'United States',
+      },
+      {
+        '@type': 'Country',
+        name: 'South Africa',
+      },
+      {
+        '@type': 'Country',
+        name: 'United Kingdom',
+      },
+    ],
     knowsAbout: [
       'Artificial Intelligence',
-      'Machine Learning',
+      'Machine Learning Engineering',
       'Media Technology',
       'Content Management Systems',
       'RAG Systems',
@@ -117,6 +153,20 @@ export default function AboutPage() {
       'Entertainment Technology',
       'Black Media',
       'Cultural Intelligence',
+      'Full-Stack Development',
+      'AI Application Development',
+      'Semantic Search',
+      'Vector Databases',
+      'Content Intelligence',
+    ],
+    expertise: [
+      'AI-Powered Media Applications',
+      'RAG System Development',
+      'Conversational AI',
+      'Content Discovery Engines',
+      'Intelligent Automation',
+      'Full-Stack Web Development',
+      'Cultural Intelligence Systems',
     ],
     makesOffer: [
       {
@@ -125,6 +175,7 @@ export default function AboutPage() {
           '@type': 'Service',
           name: 'AI-Powered Media Applications',
           description: 'Custom AI applications for content discovery, recommendations, and audience engagement',
+          serviceType: 'AI Development',
         },
       },
       {
@@ -133,6 +184,7 @@ export default function AboutPage() {
           '@type': 'Service',
           name: 'Intelligent Media Systems',
           description: 'RAG-powered content systems, automated tagging, and semantic search solutions',
+          serviceType: 'Media Technology',
         },
       },
       {
@@ -141,7 +193,49 @@ export default function AboutPage() {
           '@type': 'Service',
           name: 'Full-Stack Development',
           description: 'Production-grade web applications and digital products',
+          serviceType: 'Web Development',
         },
+      },
+    ],
+  };
+
+  const teamSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://northboundstudio.co/#team',
+    name: 'Northbound Studio Team',
+    parentOrganization: {
+      '@id': 'https://northboundstudio.co/#organization',
+    },
+    description: 'Expert team specializing in AI systems engineering, cultural intelligence, and digital product development',
+    memberOf: {
+      '@type': 'Organization',
+      name: 'Northbound Studio',
+    },
+    department: [
+      {
+        '@type': 'Organization',
+        name: 'AI Engineering',
+        description: 'Machine learning engineers and AI specialists building RAG systems, conversational AI, and intelligent automation',
+        expertise: ['RAG Systems', 'Machine Learning', 'NLP', 'Vector Databases', 'Semantic Search'],
+      },
+      {
+        '@type': 'Organization',
+        name: 'Full-Stack Development',
+        description: 'Expert developers building production-grade web applications and digital products',
+        expertise: ['Next.js', 'React', 'TypeScript', 'Python', 'FastAPI', 'PostgreSQL', 'Node.js'],
+      },
+      {
+        '@type': 'Organization',
+        name: 'Cultural Intelligence',
+        description: 'Team bringing deep understanding of Black media, entertainment, and cultural nuances',
+        expertise: ['Black Media', 'Entertainment Industry', 'Content Strategy', 'Cultural Consulting'],
+      },
+      {
+        '@type': 'Organization',
+        name: 'Product & Strategy',
+        description: 'Product strategists ensuring AI systems deliver measurable business value',
+        expertise: ['Product Strategy', 'Business Development', 'AI Consulting', 'Digital Transformation'],
       },
     ],
   };
@@ -152,11 +246,15 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(teamSchema) }}
+      />
       <section className="relative overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-green-500/5 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
           <div className="max-w-4xl mx-auto space-y-8">
-            <h1>About Blaq Digital</h1>
+            <h1>About Northbound Studio</h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
               We're a next-generation digital studio built at the intersection of <span className="text-foreground font-semibold">artificial intelligence</span>, <span className="text-foreground font-semibold">entertainment</span>, and <span className="text-foreground font-semibold">Black culture</span>.
             </p>

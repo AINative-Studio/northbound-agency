@@ -26,13 +26,13 @@ describe('Web App Manifest (PWA)', () => {
     it('should have a name property', () => {
       expect(manifest.name).toBeDefined();
       expect(typeof manifest.name).toBe('string');
-      expect(manifest.name).toBe('Blaq Digital');
+      expect(manifest.name).toBe('Northbound Studio');
     });
 
     it('should have a short_name property', () => {
       expect(manifest.short_name).toBeDefined();
       expect(typeof manifest.short_name).toBe('string');
-      expect(manifest.short_name).toBe('Blaq Digital');
+      expect(manifest.short_name).toBe('Northbound Studio');
     });
 
     it('should have a description property', () => {
@@ -162,8 +162,8 @@ describe('Web App Manifest (PWA)', () => {
   });
 
   describe('Color Scheme and Branding', () => {
-    it('should have consistent theme colors for Blaq Digital branding', () => {
-      // Blaq Digital uses dark theme with purple accents
+    it('should have consistent theme colors for Northbound Studio branding', () => {
+      // Northbound Studio uses dark theme with purple accents
       expect(manifest.background_color).toBeDefined();
       expect(manifest.theme_color).toBeDefined();
     });

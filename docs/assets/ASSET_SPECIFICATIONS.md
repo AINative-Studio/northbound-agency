@@ -1,6 +1,6 @@
 # Public Assets Specifications
 
-This document outlines the specifications for all public assets used in the Blaq Digital website, including favicons, touch icons, and social sharing images.
+This document outlines the specifications for all public assets used in the Northbound Studio website, including favicons, touch icons, and social sharing images.
 
 ## Overview
 
@@ -108,14 +108,14 @@ All public assets are stored in the `/public/` directory and are served statical
 **Implementation:**
 ```html
 <!-- Open Graph meta tags -->
-<meta property="og:image" content="https://blaqdigital.com/og-image.png" />
+<meta property="og:image" content="https://northboundstudios.co/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:type" content="image/png" />
 
 <!-- Twitter Card meta tags -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://blaqdigital.com/og-image.png" />
+<meta name="twitter:image" content="https://northboundstudios.co/og-image.png" />
 ```
 
 **Design Guidelines:**
@@ -314,5 +314,5 @@ npm test:coverage
 ---
 
 **Last Updated:** 2026-02-20
-**Maintained By:** Blaq Digital Development Team
+**Maintained By:** Northbound Studio Development Team
 **Version:** 1.0.0

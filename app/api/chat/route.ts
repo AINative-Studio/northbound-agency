@@ -13,7 +13,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_AINATIVE_API_URL || 'https://api.ainative.studio';
 const API_KEY = process.env.NEXT_PUBLIC_AINATIVE_API_KEY;
-const PROJECT_ID = process.env.NEXT_PUBLIC_ZERODB_PROJECT_ID || 'blaq-digital-prod';
+const PROJECT_ID = process.env.NEXT_PUBLIC_ZERODB_PROJECT_ID || 'northbound-studio-prod';
 
 interface SemanticSearchResult {
   id: string;
@@ -83,7 +83,7 @@ async function generateChatCompletion(
           messages: [
             {
               role: 'system',
-              content: `You are Cody, a helpful and knowledgeable AI assistant for Blaq Digital. We operate from Los Angeles (HQ), San Francisco (Tech Hub), and Atlanta (Black entertainment capital focus). You provide accurate, professional, and friendly answers about our AI development services, RAG systems, and web development solutions. Use the following context to answer the user's question:\n\n${context}`,
+              content: `You are Cody, a helpful and knowledgeable AI assistant for Northbound Studio. We operate from Los Angeles (HQ), San Francisco (Tech Hub), and Atlanta (Black entertainment capital focus). You provide accurate, professional, and friendly answers about our AI development services, RAG systems, and web development solutions. Use the following context to answer the user's question:\n\n${context}`,
             },
             {
               role: 'user',
@@ -125,20 +125,20 @@ async function generateResponse(message: string, type: string): Promise<{
   // Knowledge base responses (simulating semantic search results)
   // Persona: Helpful, knowledgeable, professional - inspired by AINative's Cody assistant
   const knowledgeBase: Record<string, string> = {
-    'blaq digital': `Blaq Digital is a hybrid studio that builds AI-native applications, focusing on RAG (Retrieval-Augmented Generation) systems, intelligent chatbots, and conversational media platforms. We combine web development with cutting-edge AI to create products that genuinely work for your business.`,
+    'blaq digital': `Northbound Studio is a hybrid studio that builds AI-native applications, focusing on RAG (Retrieval-Augmented Generation) systems, intelligent chatbots, and conversational media platforms. We combine web development with cutting-edge AI to create products that genuinely work for your business.`,
 
-    'location': `Blaq Digital operates across three strategic locations:
+    'location': `Northbound Studio operates across three strategic locations:
 - **Headquarters**: Los Angeles, California - Business operations and client relations
 - **Tech Hub**: San Francisco, California - Engineering and AI development team
 - **Atlanta Office**: Atlanta, Georgia - The Black entertainment capital of the world, our ground operations and cultural innovation center
 
 We serve clients globally with our AI-powered solutions and web development services.`,
 
-    'contact': `You can reach Blaq Digital at:
+    'contact': `You can reach Northbound Studio at:
 - **HQ**: Los Angeles, California
 - **Tech Hub**: San Francisco, California
 - **Atlanta Office**: Atlanta, Georgia (Black entertainment capital focus)
-- **Website**: https://blaqdigital.com
+- **Website**: https://northboundstudios.co
 - **Services**: AI chatbots, web development, conversational media + AI
 - **Contact**: Fill out our contact form for project inquiries and consultations`,
 
@@ -161,7 +161,7 @@ We serve clients globally with our AI-powered solutions and web development serv
 
 RAG transforms generic AI into your company's expert assistant, grounded in your actual data.`,
 
-    'services': `Blaq Digital offers three core services:
+    'services': `Northbound Studio offers three core services:
 1. **AI Chatbots & RAG Systems** - Intelligent assistants trained on your data
 2. **Web Platform Development** - Full-stack applications with AI integration
 3. **Conversational Media + AI** - Voice, video, and text-based AI systems
@@ -214,14 +214,14 @@ With our Atlanta office in the Black entertainment capital, we specialize in AI 
 
 We work in agile sprints and aim for early value delivery - you'll see working prototypes within the first 2 weeks.`,
 
-    'what makes': `What makes Blaq Digital different:
+    'what makes': `What makes Northbound Studio different:
 - **AI-Native**: We build with AI at the core, not as an afterthought
 - **Culture-First**: We care deeply about creating inclusive, human-centered technology
 - **Ownership-Driven**: We treat your project like our own product
 - **Engineering-Led**: Our team consists of experienced engineers, not just prompt engineers
 - **Multi-Location Excellence**: LA HQ for business, SF tech hub for engineering, Atlanta for cultural innovation in the Black entertainment capital`,
 
-    'team': `Blaq Digital is led by experienced engineers who are passionate about AI and building production-ready solutions. Our team operates across three strategic locations:
+    'team': `Northbound Studio is led by experienced engineers who are passionate about AI and building production-ready solutions. Our team operates across three strategic locations:
 - **Los Angeles HQ**: Business operations and client relations
 - **San Francisco Tech Hub**: AI development and engineering team
 - **Atlanta Office**: Ground operations in the Black entertainment capital of the world
@@ -311,7 +311,7 @@ We combine deep technical expertise with a culture-first philosophy, treating ev
   // Fallback response if no relevant content found
   // Provide helpful guidance without being repetitive
   const fallbackMessage = type === 'rag'
-    ? `I'd be happy to help! I specialize in answering questions about Blaq Digital. Here are some topics I know about:
+    ? `I'd be happy to help! I specialize in answering questions about Northbound Studio. Here are some topics I know about:
 
 **Services & Solutions**
 • AI chatbots and RAG systems
@@ -329,7 +329,7 @@ We combine deep technical expertise with a culture-first philosophy, treating ev
 • How to get started
 
 What would you like to know more about?`
-    : `I'm Cody, Blaq Digital's AI assistant! I'm here to help answer your questions about our AI development services, RAG chatbot solutions, and web development offerings.
+    : `I'm Cody, Northbound Studio's AI assistant! I'm here to help answer your questions about our AI development services, RAG chatbot solutions, and web development offerings.
 
 Feel free to ask me about:
 • Our services and capabilities

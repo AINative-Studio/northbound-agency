@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide provides comprehensive instructions for configuring environment variables for the Blaq Digital platform, with a focus on the Resend API integration for the contact form email service and other critical services.
+This guide provides comprehensive instructions for configuring environment variables for the Northbound Studio platform, with a focus on the Resend API integration for the contact form email service and other critical services.
 
 **IMPORTANT SECURITY WARNING**: Never commit actual API keys, passwords, or sensitive credentials to version control. Always use `.env.local` for local development and secure environment variable management in production.
 
@@ -58,7 +58,7 @@ Next.js loads environment variables in the following order (later files override
    - Log into the Resend dashboard
    - Navigate to "API Keys" in the sidebar
    - Click "Create API Key"
-   - Enter a name for your key (e.g., "Blaq Digital Development" or "Blaq Digital Production")
+   - Enter a name for your key (e.g., "Northbound Studio Development" or "Northbound Studio Production")
    - Select appropriate permissions:
      - **Development**: Full access (for testing)
      - **Production**: Sending access (recommended for security)
@@ -76,8 +76,8 @@ Next.js loads environment variables in the following order (later files override
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # Email configuration (optional - has defaults)
-CONTACT_EMAIL_TO=contact@blaqdigital.com
-CONTACT_EMAIL_FROM=noreply@blaqdigital.com
+CONTACT_EMAIL_TO=contact@northboundstudios.co
+CONTACT_EMAIL_FROM=noreply@northboundstudios.co
 ```
 
 ### Domain Verification (Production)
@@ -86,7 +86,7 @@ For production use, you should verify your domain with Resend:
 
 1. Go to the Resend dashboard → "Domains"
 2. Click "Add Domain"
-3. Enter your domain (e.g., `blaqdigital.com`)
+3. Enter your domain (e.g., `northboundstudios.co`)
 4. Add the provided DNS records to your domain registrar:
    - SPF record
    - DKIM record
@@ -96,7 +96,7 @@ For production use, you should verify your domain with Resend:
 
 **Example with verified domain**:
 ```bash
-CONTACT_EMAIL_FROM=noreply@blaqdigital.com
+CONTACT_EMAIL_FROM=noreply@northboundstudios.co
 ```
 
 ---
@@ -125,13 +125,13 @@ AINATIVE_API_TOKEN=your_api_token
 # Client-side public variables (exposed to browser)
 NEXT_PUBLIC_AINATIVE_API_URL=https://api.ainative.studio
 NEXT_PUBLIC_AINATIVE_API_KEY=your_public_api_key
-NEXT_PUBLIC_ZERODB_PROJECT_ID=blaq-digital-prod
+NEXT_PUBLIC_ZERODB_PROJECT_ID=northbound-studio-prod
 ```
 
 ### Obtaining ZeroDB Credentials
 
 1. Contact your ZeroDB/AINative administrator
-2. Request project credentials for Blaq Digital
+2. Request project credentials for Northbound Studio
 3. Receive:
    - Username/email
    - Password
@@ -179,7 +179,7 @@ RESEND_API_KEY=re_your_development_api_key_here
 
 # Email Configuration
 CONTACT_EMAIL_TO=your_email@example.com
-CONTACT_EMAIL_FROM=noreply@blaqdigital.com
+CONTACT_EMAIL_FROM=noreply@northboundstudios.co
 ```
 
 ### Step 5: Verify Configuration
@@ -214,7 +214,7 @@ Visit `http://localhost:3000` and test the contact form to verify email function
 ### Step 1: Access Railway Dashboard
 
 1. Log into Railway at [https://railway.app](https://railway.app)
-2. Navigate to your Blaq Digital project
+2. Navigate to your Northbound Studio project
 3. Click on the service/deployment
 
 ### Step 2: Add Environment Variables
@@ -238,15 +238,15 @@ AINATIVE_API_TOKEN=your_production_token
 
 NEXT_PUBLIC_AINATIVE_API_URL=https://api.ainative.studio
 NEXT_PUBLIC_AINATIVE_API_KEY=your_production_public_key
-NEXT_PUBLIC_ZERODB_PROJECT_ID=blaq-digital-prod
+NEXT_PUBLIC_ZERODB_PROJECT_ID=northbound-studio-prod
 ```
 
 #### Resend API Variables
 
 ```
 RESEND_API_KEY=re_your_production_api_key
-CONTACT_EMAIL_TO=contact@blaqdigital.com
-CONTACT_EMAIL_FROM=noreply@blaqdigital.com
+CONTACT_EMAIL_TO=contact@northboundstudios.co
+CONTACT_EMAIL_FROM=noreply@northboundstudios.co
 ```
 
 #### Other Variables
@@ -278,7 +278,7 @@ railway link
 
 # Set variables
 railway variables set RESEND_API_KEY=re_xxxxx
-railway variables set CONTACT_EMAIL_TO=contact@blaqdigital.com
+railway variables set CONTACT_EMAIL_TO=contact@northboundstudios.co
 ```
 
 ---
@@ -527,7 +527,7 @@ CONTACT_EMAIL_TO=developer@example.com
 RESEND_API_KEY=re_dev_key
 
 # Production
-CONTACT_EMAIL_TO=contact@blaqdigital.com
+CONTACT_EMAIL_TO=contact@northboundstudios.co
 RESEND_API_KEY=re_prod_key
 ```
 
@@ -546,8 +546,8 @@ RESEND_API_KEY=re_prod_key
 | Variable | Required | Environment | Description |
 |----------|----------|-------------|-------------|
 | `RESEND_API_KEY` | Yes | All | Resend API key for email sending |
-| `CONTACT_EMAIL_TO` | No | All | Recipient email for contact form (default: contact@blaqdigital.com) |
-| `CONTACT_EMAIL_FROM` | No | All | Sender email address (default: noreply@blaqdigital.com) |
+| `CONTACT_EMAIL_TO` | No | All | Recipient email for contact form (default: contact@northboundstudios.co) |
+| `CONTACT_EMAIL_FROM` | No | All | Sender email address (default: noreply@northboundstudios.co) |
 | `ZERODB_USERNAME` | Yes | Server | ZeroDB admin username |
 | `ZERODB_PASSWORD` | Yes | Server | ZeroDB admin password |
 | `ZERODB_API_URL` | Yes | Server | ZeroDB API base URL |
@@ -601,5 +601,5 @@ If you encounter issues not covered in this guide:
 ---
 
 **Last Updated**: 2026-02-20
-**Maintained by**: Blaq Digital Development Team
+**Maintained by**: Northbound Studio Development Team
 **Related Issues**: GitHub Issue #34

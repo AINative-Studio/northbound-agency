@@ -12,7 +12,7 @@ The `blaq_knowledge_base` collection is a vector database designed for RAG (Retr
 - **Vector Dimensions:** 1536 (OpenAI text-embedding-3-small model)
 - **Similarity Metric:** Cosine similarity
 - **API Endpoint:** ZeroDB Vector Search API
-- **Project ID:** `blaq-digital-prod`
+- **Project ID:** `northbound-studio-prod`
 
 ### Architecture
 
@@ -130,7 +130,7 @@ The knowledge base is organized into the following categories:
 ```json
 {
   "collection_name": "blaq_knowledge_base",
-  "query_text": "What services does Blaq Digital offer?",
+  "query_text": "What services does Northbound Studio offer?",
   "top_k": 5
 }
 ```
@@ -299,7 +299,7 @@ npm run test:vectors
 
 All API requests require:
 - **API Key:** Set in environment variables
-- **Project ID:** Scoped to `blaq-digital-prod`
+- **Project ID:** Scoped to `northbound-studio-prod`
 - **HTTPS:** All connections encrypted
 
 ### Data Privacy
@@ -353,4 +353,4 @@ The collection is primarily used by the AI chatbot (`app/api/chat/route.ts`) to:
 
 **Last Updated:** 2026-01-30
 **Version:** 1.0
-**Maintained By:** Blaq Digital Engineering Team
+**Maintained By:** Northbound Studio Engineering Team

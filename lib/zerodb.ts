@@ -12,7 +12,7 @@ class ZeroDBClient {
                     process.env.ZERODB_API_URL ||
                     'https://api.ainative.studio';
 
-    this.projectId = process.env.NEXT_PUBLIC_ZERODB_PROJECT_ID || 'blaq-digital-prod';
+    this.projectId = process.env.NEXT_PUBLIC_ZERODB_PROJECT_ID || 'northbound-studio-prod';
 
     // Ensure baseURL doesn't have trailing slash for proper URL construction
     const cleanBaseURL = baseURL.replace(/\/$/, '');

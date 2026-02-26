@@ -213,8 +213,8 @@ async function sendEmailNotification(formData: ContactFormData, timestamp: strin
 }> {
   try {
     const emailHtml = generateEmailTemplate(formData, timestamp);
-    const fromEmail = process.env.RESEND_FROM_EMAIL || 'Blaq Digital <noreply@blaqdigital.com>';
-    const toEmail = process.env.CONTACT_EMAIL_TO || 'contact@blaqdigital.com';
+    const fromEmail = process.env.CONTACT_EMAIL_FROM || 'Northbound Studios <noreply@northboundstudios.co>';
+    const toEmail = process.env.CONTACT_EMAIL_TO || 'contact@northboundstudios.co';
 
     await resend.emails.send({
       from: fromEmail,

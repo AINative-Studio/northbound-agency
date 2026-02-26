@@ -1,28 +1,36 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-  title: 'Our Work | AI Projects Portfolio - Blaq Digital',
-  description: 'AI-powered media applications portfolio. Case studies showcasing RAG systems, content discovery, and intelligent automation for Black media.',
+  title: 'Our Work | AI Projects Portfolio & Case Studies - Northbound Studio',
+  description: 'Explore our portfolio of AI-powered media applications, RAG systems, and intelligent automation projects. Real case studies showcasing content discovery engines, conversational AI, and automated content intelligence for streaming platforms, entertainment studios, publishers, and creator networks.',
   keywords: [
     'AI portfolio',
-    'case studies',
-    'AI projects',
-    'RAG systems',
-    'content discovery',
-    'media technology portfolio',
-    'AI applications',
-    'Black media technology',
-    'intelligent systems',
     'AI case studies',
+    'AI projects showcase',
+    'RAG systems portfolio',
+    'content discovery case studies',
+    'media technology portfolio',
+    'AI applications examples',
+    'Black media technology projects',
+    'intelligent systems portfolio',
+    'AI development case studies',
+    'conversational AI projects',
+    'content intelligence systems',
+    'streaming platform AI',
+    'entertainment technology portfolio',
+    'AI chatbot case studies',
+    'semantic search projects',
+    'media automation portfolio',
   ],
-  authors: [{ name: 'Blaq Digital', url: 'https://blaq.ainative.studio' }],
-  creator: 'Blaq Digital',
-  publisher: 'Blaq Digital',
+  authors: [{ name: 'Northbound Studio', url: 'https://northboundstudio.co' }],
+  creator: 'Northbound Studio',
+  publisher: 'Northbound Studio',
   category: 'Portfolio',
   alternates: {
     canonical: '/work',
@@ -38,17 +46,26 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Our Work | AI Projects Portfolio - Blaq Digital',
-    description: 'AI-powered media applications and intelligent systems. Real results for streaming platforms, studios, publishers, and creator networks.',
+    title: 'Our Work | AI Projects Portfolio & Case Studies - Northbound Studio',
+    description: 'AI-powered media applications and intelligent systems delivering real results. Case studies featuring RAG systems, content discovery engines, conversational AI, and automation for streaming platforms, studios, publishers, and creator networks.',
     type: 'website',
     url: '/work',
-    siteName: 'Blaq Digital',
+    siteName: 'Northbound Studio',
+    images: [
+      {
+        url: 'https://northboundstudio.co/og-work.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Northbound Studio AI Projects Portfolio',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Our Work | AI Projects Portfolio - Blaq Digital',
-    description: 'AI-powered media applications and intelligent systems. Real results for streaming platforms, studios, publishers, and creator networks.',
-    creator: '@blaqdigital',
+    title: 'Our Work | AI Projects Portfolio & Case Studies - Northbound Studio',
+    description: 'AI-powered media applications and intelligent systems delivering measurable results for streaming platforms, studios, publishers, and creator networks.',
+    creator: '@northboundstudio',
+    images: ['https://northboundstudio.co/og-work.jpg'],
   },
 };
 
@@ -62,6 +79,7 @@ const caseStudies = [
     aiUsed: 'RAG system with semantic search, embeddings-based recommendations, and natural language content discovery',
     outcome: '45% increase in content discovery, 32% reduction in churn, 3x engagement with recommended content',
     image: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    imageAlt: 'Person using tablet to browse streaming media content with AI-powered content discovery interface showing personalized recommendations and semantic search results',
   },
   {
     title: 'Interactive Fan Engagement Platform',
@@ -72,6 +90,7 @@ const caseStudies = [
     aiUsed: 'Custom RAG system with fine-tuned responses, multi-persona chat, and context-aware conversations',
     outcome: '50k+ users in first month, 12-minute average session time, new subscription revenue stream launched',
     image: 'https://images.pexels.com/photos/7679453/pexels-photo-7679453.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    imageAlt: 'Interactive fan engagement platform interface displaying conversational AI chatbot with character personas and entertainment content, showing engaged users having dialogue about show storylines',
   },
   {
     title: 'Automated Content Intelligence System',
@@ -82,6 +101,7 @@ const caseStudies = [
     aiUsed: 'NLP for content analysis, automatic tagging, sentiment analysis, and semantic clustering',
     outcome: '90% reduction in manual tagging time, 60% improvement in content discovery, consistent metadata across 100k+ articles',
     image: 'https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    imageAlt: 'Automated content intelligence system dashboard showing AI-powered article analysis, automatic tagging generation, sentiment analysis metrics, and content metadata management for Black media publisher',
   },
   {
     title: 'Creator Knowledge Assistant',
@@ -92,6 +112,7 @@ const caseStudies = [
     aiUsed: 'RAG system with documentation retrieval, conversational AI, and multi-turn dialogue support',
     outcome: '70% reduction in support tickets, 95% creator satisfaction, faster onboarding for new creators',
     image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    imageAlt: 'Creator knowledge assistant AI interface showing conversational support system helping digital creators with platform features, monetization strategies, and best practices documentation retrieval',
   },
 ];
 
@@ -99,27 +120,79 @@ export default function WorkPage() {
   const portfolioSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
+    name: 'Northbound Studio AI Projects Portfolio',
+    description: 'Case studies of AI-powered media applications and intelligent systems',
     itemListElement: caseStudies.map((study, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       item: {
         '@type': 'CreativeWork',
+        '@id': `https://northboundstudio.co/work#project-${index + 1}`,
         name: study.title,
+        headline: study.title,
         description: study.solution,
+        abstract: study.problem,
         creator: {
           '@type': 'Organization',
-          name: 'Blaq Digital',
-          url: 'https://blaq.ainative.studio',
+          '@id': 'https://northboundstudio.co/#organization',
+          name: 'Northbound Studio',
+          url: 'https://northboundstudio.co',
         },
-        about: study.aiUsed,
-        keywords: [...study.techStack, 'AI', 'Artificial Intelligence', 'Media Technology'].join(', '),
-        image: study.image,
+        provider: {
+          '@type': 'Organization',
+          '@id': 'https://northboundstudio.co/#organization',
+          name: 'Northbound Studio',
+        },
+        about: {
+          '@type': 'Thing',
+          name: 'AI Application Development',
+          description: study.aiUsed,
+        },
+        keywords: [...study.techStack, 'AI', 'Artificial Intelligence', 'Media Technology', 'Machine Learning'].join(', '),
+        image: {
+          '@type': 'ImageObject',
+          url: study.image,
+          caption: study.imageAlt,
+          description: `${study.title} - ${study.client}`,
+        },
         audience: {
           '@type': 'Audience',
           audienceType: study.client,
         },
+        genre: 'Case Study',
+        inLanguage: 'en',
+        datePublished: '2024',
+        text: `Challenge: ${study.problem}\n\nSolution: ${study.solution}\n\nAI Capabilities: ${study.aiUsed}\n\nResults: ${study.outcome}`,
+        workExample: {
+          '@type': 'SoftwareApplication',
+          applicationCategory: 'AI Application',
+          operatingSystem: 'Web',
+          offers: {
+            '@type': 'Offer',
+            availability: 'https://schema.org/InStock',
+          },
+        },
       },
     })),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://northboundstudio.co',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Our Work',
+        item: 'https://northboundstudio.co/work',
+      },
+    ],
   };
 
   return (
@@ -127,6 +200,10 @@ export default function WorkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <section className="relative overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-green-500/5 pointer-events-none" />
@@ -190,10 +267,15 @@ export default function WorkPage() {
                         </div>
                       </div>
 
-                      <div
-                        className={`relative h-64 lg:h-auto bg-cover bg-center ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}
-                        style={{ backgroundImage: `url(${study.image})` }}
-                      >
+                      <div className={`relative h-64 lg:h-auto ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                        <Image
+                          src={study.image}
+                          alt={study.imageAlt}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          priority={index === 0}
+                        />
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
                       </div>
                     </div>

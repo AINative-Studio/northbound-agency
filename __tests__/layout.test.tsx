@@ -75,7 +75,7 @@ describe('Root Layout Metadata', () => {
 
     it('should use production URL for metadataBase', () => {
       expect(metadata.metadataBase).toBeInstanceOf(URL);
-      expect(metadata.metadataBase?.toString()).toBe('https://blaq.ainative.studio/');
+      expect(metadata.metadataBase?.toString()).toBe('https://northboundstudio.co/');
     });
 
     it('should use HTTPS protocol', () => {
@@ -83,14 +83,14 @@ describe('Root Layout Metadata', () => {
     });
 
     it('should use correct hostname', () => {
-      expect(metadata.metadataBase?.hostname).toBe('blaq.ainative.studio');
+      expect(metadata.metadataBase?.hostname).toBe('northboundstudio.co');
     });
   });
 
   describe('SEO Metadata', () => {
     it('should have title defined', () => {
       expect(metadata.title).toBeDefined();
-      expect(metadata.title).toBe('Blaq Digital - AI-Native Digital Media Agency');
+      expect(metadata.title).toBe('Northbound Studio - AI-Native Digital Media Agency');
     });
 
     it('should have description defined', () => {
@@ -113,7 +113,7 @@ describe('Root Layout Metadata', () => {
 
     it('should have OpenGraph title', () => {
       expect(metadata.openGraph?.title).toBeDefined();
-      expect(metadata.openGraph?.title).toBe('Blaq Digital - AI-Native Digital Media Agency');
+      expect(metadata.openGraph?.title).toBe('Northbound Studio - AI-Native Digital Media Agency');
     });
 
     it('should have OpenGraph description', () => {
@@ -142,7 +142,7 @@ describe('Root Layout Metadata', () => {
 
     it('should have Twitter title', () => {
       expect(metadata.twitter?.title).toBeDefined();
-      expect(metadata.twitter?.title).toBe('Blaq Digital - AI-Native Digital Media Agency');
+      expect(metadata.twitter?.title).toBe('Northbound Studio - AI-Native Digital Media Agency');
     });
 
     it('should have Twitter description', () => {
@@ -174,31 +174,31 @@ describe('Root Layout Metadata', () => {
       // Test URL resolution
       const testPath = '/services';
       const resolvedUrl = new URL(testPath, base);
-      expect(resolvedUrl.toString()).toBe('https://blaq.ainative.studio/services');
+      expect(resolvedUrl.toString()).toBe('https://northboundstudio.co/services');
     });
 
     it('should handle root path correctly', () => {
       const base = metadata.metadataBase;
       const rootUrl = new URL('/', base!);
-      expect(rootUrl.toString()).toBe('https://blaq.ainative.studio/');
+      expect(rootUrl.toString()).toBe('https://northboundstudio.co/');
     });
 
     it('should handle paths with trailing slashes', () => {
       const base = metadata.metadataBase;
       const urlWithSlash = new URL('/about/', base!);
-      expect(urlWithSlash.toString()).toBe('https://blaq.ainative.studio/about/');
+      expect(urlWithSlash.toString()).toBe('https://northboundstudio.co/about/');
     });
 
     it('should handle nested paths correctly', () => {
       const base = metadata.metadataBase;
       const nestedPath = new URL('/services/web-development', base!);
-      expect(nestedPath.toString()).toBe('https://blaq.ainative.studio/services/web-development');
+      expect(nestedPath.toString()).toBe('https://northboundstudio.co/services/web-development');
     });
 
     it('should handle query parameters in URLs', () => {
       const base = metadata.metadataBase;
       const urlWithQuery = new URL('/search?q=ai', base!);
-      expect(urlWithQuery.toString()).toBe('https://blaq.ainative.studio/search?q=ai');
+      expect(urlWithQuery.toString()).toBe('https://northboundstudio.co/search?q=ai');
     });
   });
 

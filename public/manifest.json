@@ -1,26 +1,26 @@
 {
-  "name": "Blaq Digital",
-  "short_name": "Blaq Digital",
-  "description": "Next-generation digital media and AI-Native Digital Media Agency built at the intersection of entertainment, artificial intelligence, and Black culture.",
+  "name": "Northbound Studio",
+  "short_name": "Northbound Studio",
+  "description": "AI-Native Digital Media Agency built at the intersection of entertainment, artificial intelligence, and Black culture. We build intelligent media systems.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#7c3aed",
   "orientation": "portrait",
+  "background_color": "#0D1117",
+  "theme_color": "#8A63F4",
   "categories": ["business", "entertainment", "productivity"],
   "icons": [
     {
       "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "/apple-touch-icon.png",

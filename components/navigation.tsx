@@ -22,7 +22,7 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2 group">
             <Sparkles className="h-6 w-6 text-primary group-hover:text-green-400 transition-colors" />
-            <span className="text-xl font-bold">Blaq Digital</span>
+            <span className="text-xl font-bold">Northbound Studio</span>
           </Link>
 
           <div className="hidden md:flex md:items-center md:space-x-8">

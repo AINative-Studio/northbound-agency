@@ -3,7 +3,7 @@ import { zerodb } from '../lib/zerodb';
 // Test queries to validate vector search functionality
 const testQueries = [
   {
-    query: 'What does Blaq Digital do?',
+    query: 'What does Northbound Studio do?',
     expectedCategory: 'about',
     description: 'Company overview question'
   },

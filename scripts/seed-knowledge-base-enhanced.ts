@@ -3,8 +3,8 @@ import { zerodb } from '../lib/zerodb';
 // Enhanced knowledge base content with additional categories
 const knowledgeBase = [
   {
-    id: 'what-does-blaq-digital-do',
-    text: `Blaq Digital is a hybrid studio at the intersection of AI, media, and Black culture. We build intelligent media systems - not just marketing content.
+    id: 'what-does-northbound-studio-do',
+    text: `Northbound Studio is a hybrid studio at the intersection of AI, media, and Black culture. We build intelligent media systems - not just marketing content.
 
 Our core offerings:
 - AI Apps: Custom AI applications built for your specific needs
@@ -37,7 +37,7 @@ Why RAG is powerful:
 - Perfect for knowledge bases, documentation, customer support
 - Maintains context and retrieves only relevant information
 
-This chatbot uses RAG to answer questions about Blaq Digital using our knowledge base.`,
+This chatbot uses RAG to answer questions about Northbound Studio using our knowledge base.`,
     metadata: {
       topic: 'rag technology',
       category: 'technical',
@@ -73,7 +73,7 @@ We don't just deploy generic chatbots - we build AI systems that understand your
   },
   {
     id: 'full-services',
-    text: `Blaq Digital offers comprehensive AI and development services:
+    text: `Northbound Studio offers comprehensive AI and development services:
 
 AI & ML Solutions:
 - Custom AI applications tailored to your needs
@@ -109,7 +109,7 @@ We deliver secure, compliant solutions with measurable business value within wee
   },
   {
     id: 'what-makes-us-different',
-    text: `Blaq Digital is different from traditional agencies and generic AI companies:
+    text: `Northbound Studio is different from traditional agencies and generic AI companies:
 
 AI-Native: We build with AI-first thinking from the ground up. AI isn't a feature we bolt on - it's fundamental to our architecture and approach.
 
@@ -213,7 +213,7 @@ We prioritize speed to value while maintaining quality and security.`,
   },
   {
     id: 'contact-process',
-    text: `Ready to start your project? Here's how to get in touch with Blaq Digital:
+    text: `Ready to start your project? Here's how to get in touch with Northbound Studio:
 
 Contact Methods:
 - Email: Contact form on our website (fastest response)
@@ -246,7 +246,7 @@ First consultation is free with no obligation.`,
   },
   {
     id: 'web-platform-development',
-    text: `Blaq Digital builds modern, high-performance web platforms with AI capabilities built in from the ground up.
+    text: `Northbound Studio builds modern, high-performance web platforms with AI capabilities built in from the ground up.
 
 Our Web Development Approach:
 - Modern Tech Stack: Next.js, React, TypeScript, Tailwind CSS
@@ -455,7 +455,7 @@ We make AI integration straightforward, secure, and valuable - without the compl
   },
   {
     id: 'security-compliance',
-    text: `Security and Compliance at Blaq Digital
+    text: `Security and Compliance at Northbound Studio
 
 We build enterprise-grade security and compliance into every project from day one.
 
@@ -507,7 +507,7 @@ We don't compromise on security - it's built into our engineering culture and ev
   },
   {
     id: 'team-expertise',
-    text: `The Blaq Digital Team: Engineers Who Understand Culture
+    text: `The Northbound Studio Team: Engineers Who Understand Culture
 
 Our Expertise:
 - Award-winning AI and ML engineers
@@ -545,7 +545,7 @@ Continuous Learning:
 - Mentoring next generation of engineers
 - Staying ahead of industry trends
 
-When you work with Blaq Digital, you get experienced professionals who bring both technical excellence and cultural intelligence to every project.`,
+When you work with Northbound Studio, you get experienced professionals who bring both technical excellence and cultural intelligence to every project.`,
     metadata: {
       topic: 'team and expertise',
       category: 'about',

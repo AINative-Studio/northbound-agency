@@ -3,7 +3,7 @@ import AboutPage, { metadata } from '@/app/about/page';
 
 describe('AboutPage Metadata', () => {
   it('should have comprehensive SEO metadata', () => {
-    expect(metadata.title).toBe('About Blaq Digital | AI-Native Agency Leadership');
+    expect(metadata.title).toBe('About Northbound Studio | AI-Native Agency Leadership');
     expect(metadata.description).toContain('AI');
     expect(metadata.description).toContain('Black culture');
     expect(metadata.description?.length).toBeGreaterThan(120);
@@ -64,7 +64,7 @@ describe('AboutPage Schema.org JSON-LD', () => {
       const schema = JSON.parse(script.textContent);
       expect(schema['@context']).toBe('https://schema.org');
       expect(schema['@type']).toBe('Organization');
-      expect(schema.name).toBe('Blaq Digital');
+      expect(schema.name).toBe('Northbound Studio');
       expect(schema.url).toBeDefined();
       expect(schema.description).toBeDefined();
     }
@@ -88,7 +88,7 @@ describe('AboutPage Schema.org JSON-LD', () => {
 describe('AboutPage Content', () => {
   it('should render main heading', () => {
     render(<AboutPage />);
-    expect(screen.getByText('About Blaq Digital')).toBeInTheDocument();
+    expect(screen.getByText('About Northbound Studio')).toBeInTheDocument();
   });
 
   it('should render mission section', () => {

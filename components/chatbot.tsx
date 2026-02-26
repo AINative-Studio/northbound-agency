@@ -121,7 +121,7 @@ export function Chatbot({ title = 'AI Assistant', type = 'chatbot', initialPromp
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">Start a Conversation</h3>
                 <p className="text-muted-foreground max-w-md">
-                  Ask me anything about Blaq Digital's services, AI capabilities, or how we can help your business.
+                  Ask me anything about Northbound Studio's services, AI capabilities, or how we can help your business.
                 </p>
               </div>
               {initialPrompts.length > 0 && (

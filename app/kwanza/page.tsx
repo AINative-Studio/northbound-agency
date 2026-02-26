@@ -91,7 +91,7 @@ export default function KwanzaPage() {
               A citation-first AI platform for cultural preservation. Built on the principles of Kwanzaa (Nguzo Saba), delivering trustworthy AI systems for the Black media and entertainment community.
             </p>
             <p className="text-lg text-muted-foreground/80">
-              A collaborative project by <span className="text-primary font-semibold">AINative Studio</span>, <span className="text-primary font-semibold">Blaq Digital</span>, and <span className="text-primary font-semibold">Kwanza Hall</span>.
+              A collaborative project by <span className="text-primary font-semibold">AINative Studio</span>, <span className="text-primary font-semibold">Northbound Studio</span>, and <span className="text-primary font-semibold">Kwanza Hall</span>.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg h-12 px-8">

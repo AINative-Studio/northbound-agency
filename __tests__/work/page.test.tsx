@@ -3,7 +3,7 @@ import WorkPage, { metadata } from '@/app/work/page';
 
 describe('WorkPage Metadata', () => {
   it('should have comprehensive SEO metadata', () => {
-    expect(metadata.title).toBe('Our Work | AI Projects Portfolio - Blaq Digital');
+    expect(metadata.title).toBe('Our Work | AI Projects Portfolio - Northbound Studio');
     expect(metadata.description).toContain('AI');
     expect(metadata.description).toContain('portfolio');
     expect(metadata.description?.length).toBeGreaterThan(120);
@@ -88,7 +88,7 @@ describe('WorkPage Schema.org JSON-LD', () => {
       expect(firstItem.item['@type']).toBe('CreativeWork');
       expect(firstItem.item.name).toBeDefined();
       expect(firstItem.item.creator).toBeDefined();
-      expect(firstItem.item.creator.name).toBe('Blaq Digital');
+      expect(firstItem.item.creator.name).toBe('Northbound Studio');
     }
   });
 

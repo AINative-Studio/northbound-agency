@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { VideoBackground } from '@/components/video-background';
 
 export const metadata: Metadata = {
-  title: 'Blaq Digital | AI-Native Digital Media Agency for Black Entertainment',
+  title: 'Northbound Studio | AI-Native Digital Media Agency for Black Entertainment',
   description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
   keywords: [
     'AI digital agency',
@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     'Black-owned tech agency'
   ],
   openGraph: {
-    title: 'Blaq Digital | AI-Native Digital Media Agency for Black Entertainment',
+    title: 'Northbound Studio | AI-Native Digital Media Agency for Black Entertainment',
     description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
-    url: 'https://blaq.ainative.studio',
-    siteName: 'Blaq Digital',
+    url: 'https://northboundstudio.co',
+    siteName: 'Northbound Studio',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Blaq Digital - AI-Native Digital Media Agency'
+        alt: 'Northbound Studio - AI-Native Digital Media Agency'
       }
     ],
     locale: 'en_US',
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blaq Digital | AI-Native Digital Media Agency for Black Entertainment',
+    title: 'Northbound Studio | AI-Native Digital Media Agency for Black Entertainment',
     description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
     images: ['/og-image.png'],
-    creator: '@blaqdigital',
+    creator: '@northboundstudio',
   },
   robots: {
     index: true,
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://blaq.ainative.studio',
+    canonical: 'https://northboundstudio.co',
   },
 };
 
@@ -69,14 +69,14 @@ function StructuredData() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Blaq Digital',
-    url: 'https://blaq.ainative.studio',
-    logo: 'https://blaq.ainative.studio/logo.png',
+    name: 'Northbound Studio',
+    url: 'https://northboundstudio.co',
+    logo: 'https://northboundstudio.co/logo.png',
     description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
     foundingDate: '2024',
     founder: {
       '@type': 'Person',
-      name: 'Blaq Digital Team'
+      name: 'Northbound Studio Team'
     },
     address: {
       '@type': 'PostalAddress',
@@ -85,12 +85,12 @@ function StructuredData() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
-      email: 'hello@blaq.ainative.studio',
-      url: 'https://blaq.ainative.studio/contact'
+      email: 'hello@northboundstudios.co',
+      url: 'https://northboundstudio.co/contact'
     },
     sameAs: [
-      'https://twitter.com/blaqdigital',
-      'https://linkedin.com/company/blaq-digital'
+      'https://twitter.com/northboundstudio',
+      'https://linkedin.com/company/northbound-studio'
     ],
     areaServed: {
       '@type': 'Place',
@@ -149,13 +149,13 @@ function StructuredData() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://blaq.ainative.studio',
-    name: 'Blaq Digital',
-    image: 'https://blaq.ainative.studio/logo.png',
+    '@id': 'https://northboundstudio.co',
+    name: 'Northbound Studio',
+    image: 'https://northboundstudio.co/logo.png',
     description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
-    url: 'https://blaq.ainative.studio',
+    url: 'https://northboundstudio.co',
     telephone: '+1-XXX-XXX-XXXX',
-    email: 'hello@blaq.ainative.studio',
+    email: 'hello@northboundstudio.co',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'US'
@@ -179,22 +179,22 @@ function StructuredData() {
       closes: '18:00'
     },
     sameAs: [
-      'https://twitter.com/blaqdigital',
-      'https://linkedin.com/company/blaq-digital'
+      'https://twitter.com/northboundstudio',
+      'https://linkedin.com/company/northbound-studio'
     ]
   };
 
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Blaq Digital',
-    url: 'https://blaq.ainative.studio',
+    name: 'Northbound Studio',
+    url: 'https://northboundstudio.co',
     description: 'AI-native digital agency building custom AI applications, RAG chatbots, and intelligent media systems for Black entertainment and media companies.',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://blaq.ainative.studio/search?q={search_term_string}'
+        urlTemplate: 'https://northboundstudio.co/search?q={search_term_string}'
       },
       'query-input': 'required name=search_term_string'
     }
@@ -364,7 +364,7 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-card/30 border-y border-border/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="mb-4">Why Blaq Digital</h2>
+            <h2 className="mb-4">Why Northbound Studio</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               A hybrid studio blending media, engineering, AI systems, and cultural intelligence
             </p>

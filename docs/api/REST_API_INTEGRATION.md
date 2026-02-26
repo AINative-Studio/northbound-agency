@@ -1,4 +1,4 @@
-# REST API Integration Guide for Blaq Digital
+# REST API Integration Guide for Northbound Studio
 
 ## Overview
 
@@ -16,7 +16,7 @@ The following environment variables are configured in `.env`:
 # Public variables (exposed to browser via NEXT_PUBLIC_ prefix)
 NEXT_PUBLIC_AINATIVE_API_URL="https://api.ainative.studio"
 NEXT_PUBLIC_AINATIVE_API_KEY="kLPiP0bzgKJ0CnNYVt1wq3qxbs2QgDeF2XwyUnxBEOM"
-NEXT_PUBLIC_ZERODB_PROJECT_ID="blaq-digital-prod"
+NEXT_PUBLIC_ZERODB_PROJECT_ID="northbound-studio-prod"
 
 # Server-side only (NOT exposed to browser)
 ZERODB_USERNAME="admin@ainative.studio"

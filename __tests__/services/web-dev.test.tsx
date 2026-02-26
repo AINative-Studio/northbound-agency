@@ -9,7 +9,7 @@ describe('Web Development Service Page - Metadata', () => {
     });
 
     it('should have correct page title', () => {
-      expect(metadata.title).toBe('AI-Native Web Development | Next.js, Python & FastAPI | Blaq Digital');
+      expect(metadata.title).toBe('AI-Native Web Development | Next.js, Python & FastAPI | Northbound Studio');
     });
 
     it('should have comprehensive meta description', () => {
@@ -32,7 +32,7 @@ describe('Web Development Service Page - Metadata', () => {
     });
 
     it('should have correct OpenGraph title', () => {
-      expect(metadata.openGraph?.title).toBe('AI-Native Web Development | Next.js, Python & FastAPI | Blaq Digital');
+      expect(metadata.openGraph?.title).toBe('AI-Native Web Development | Next.js, Python & FastAPI | Northbound Studio');
     });
 
     it('should have OpenGraph description', () => {
@@ -41,7 +41,7 @@ describe('Web Development Service Page - Metadata', () => {
     });
 
     it('should have correct OpenGraph URL', () => {
-      expect(metadata.openGraph?.url).toBe('https://blaq.ainative.studio/services/web-dev');
+      expect(metadata.openGraph?.url).toBe('https://northboundstudio.co/services/web-dev');
     });
 
     it('should have OpenGraph type set to website', () => {
@@ -138,7 +138,7 @@ describe('Web Development Service Page - Schema.org Markup', () => {
       if (serviceScript && serviceScript.textContent) {
         const schema = JSON.parse(serviceScript.textContent);
         expect(schema.provider).toBeDefined();
-        expect(schema.provider['@id']).toBe('https://blaq.ainative.studio/#organization');
+        expect(schema.provider['@id']).toBe('https://northboundstudio.co/#organization');
       }
     });
 
@@ -180,7 +180,7 @@ describe('Web Development Service Page - Schema.org Markup', () => {
 
       if (serviceScript && serviceScript.textContent) {
         const schema = JSON.parse(serviceScript.textContent);
-        expect(schema.url).toBe('https://blaq.ainative.studio/services/web-dev');
+        expect(schema.url).toBe('https://northboundstudio.co/services/web-dev');
       }
     });
   });

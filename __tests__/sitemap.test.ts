@@ -40,7 +40,7 @@ describe('Dynamic Sitemap Generation', () => {
     });
 
     it('should use correct base URL', () => {
-      const baseUrl = 'https://blaq.ainative.studio';
+      const baseUrl = 'https://northboundstudio.co';
       sitemapData.forEach((entry) => {
         expect(entry.url).toContain(baseUrl);
       });
@@ -49,7 +49,7 @@ describe('Dynamic Sitemap Generation', () => {
 
   describe('Required Static Pages', () => {
     it('should include home page with highest priority', () => {
-      const homePage = sitemapData.find((entry) => entry.url === 'https://blaq.ainative.studio');
+      const homePage = sitemapData.find((entry) => entry.url === 'https://northboundstudio.co');
       expect(homePage).toBeDefined();
       expect(homePage?.priority).toBe(1);
       expect(homePage?.changeFrequency).toBe('weekly');
@@ -63,7 +63,7 @@ describe('Dynamic Sitemap Generation', () => {
     });
 
     it('should include services page with high priority', () => {
-      const servicesPage = sitemapData.find((entry) => entry.url === 'https://blaq.ainative.studio/services');
+      const servicesPage = sitemapData.find((entry) => entry.url === 'https://northboundstudio.co/services');
       expect(servicesPage).toBeDefined();
       expect(servicesPage?.priority).toBeGreaterThanOrEqual(0.8);
       expect(servicesPage?.changeFrequency).toBe('monthly');
@@ -120,12 +120,12 @@ describe('Dynamic Sitemap Generation', () => {
     });
 
     it('should have home page with priority 1.0', () => {
-      const homePage = sitemapData.find((entry) => entry.url === 'https://blaq.ainative.studio');
+      const homePage = sitemapData.find((entry) => entry.url === 'https://northboundstudio.co');
       expect(homePage?.priority).toBe(1);
     });
 
     it('should have services higher priority than contact', () => {
-      const servicesPage = sitemapData.find((entry) => entry.url === 'https://blaq.ainative.studio/services');
+      const servicesPage = sitemapData.find((entry) => entry.url === 'https://northboundstudio.co/services');
       const contactPage = sitemapData.find((entry) => entry.url.endsWith('/contact'));
 
       if (servicesPage && contactPage) {
@@ -144,7 +144,7 @@ describe('Dynamic Sitemap Generation', () => {
     });
 
     it('should use weekly for home and work pages', () => {
-      const homePage = sitemapData.find((entry) => entry.url === 'https://blaq.ainative.studio');
+      const homePage = sitemapData.find((entry) => entry.url === 'https://northboundstudio.co');
       const workPage = sitemapData.find((entry) => entry.url.endsWith('/work'));
 
       expect(homePage?.changeFrequency).toBe('weekly');
@@ -153,7 +153,7 @@ describe('Dynamic Sitemap Generation', () => {
 
     it('should use monthly for static pages', () => {
       const aboutPage = sitemapData.find((entry) => entry.url.endsWith('/about'));
-      const servicesPage = sitemapData.find((entry) => entry.url === 'https://blaq.ainative.studio/services');
+      const servicesPage = sitemapData.find((entry) => entry.url === 'https://northboundstudio.co/services');
 
       expect(aboutPage?.changeFrequency).toBe('monthly');
       expect(servicesPage?.changeFrequency).toBe('monthly');
@@ -187,7 +187,7 @@ describe('Dynamic Sitemap Generation', () => {
 
     it('should not have trailing slashes (except root)', () => {
       sitemapData.forEach((entry) => {
-        if (entry.url !== 'https://blaq.ainative.studio' && entry.url !== 'https://blaq.ainative.studio/') {
+        if (entry.url !== 'https://northboundstudio.co' && entry.url !== 'https://northboundstudio.co/') {
           expect(entry.url).not.toMatch(/\/$/);
         }
       });

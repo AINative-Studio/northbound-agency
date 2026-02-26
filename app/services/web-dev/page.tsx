@@ -5,13 +5,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI-Native Web Development | Next.js, Python & FastAPI | Blaq Digital',
+  title: 'AI-Native Web Development | Next.js, Python & FastAPI | Northbound Studio',
   description: 'AI web apps with Next.js, Python, FastAPI, PyTorch, TensorFlow, and ZeroDB. Full-stack intelligent solutions.',
   keywords: ['AI web development', 'Next.js development', 'Python FastAPI', 'PyTorch development', 'TensorFlow', 'ZeroDB', 'AIKit UI', 'ML web applications', 'Full-stack AI'],
   openGraph: {
-    title: 'AI-Native Web Development | Next.js, Python & FastAPI | Blaq Digital',
+    title: 'AI-Native Web Development | Next.js, Python & FastAPI | Northbound Studio',
     description: 'AI web apps with Next.js, Python, FastAPI, PyTorch, TensorFlow, and ZeroDB. Full-stack intelligent solutions.',
-    url: 'https://blaq.ainative.studio/services/web-dev',
+    url: 'https://northboundstudio.co/services/web-dev',
     type: 'website',
   },
   twitter: {
@@ -78,19 +78,19 @@ export default function WebDevPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://blaq.ainative.studio',
+        item: 'https://northboundstudio.co',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Services',
-        item: 'https://blaq.ainative.studio/services',
+        item: 'https://northboundstudio.co/services',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'Web Development',
-        item: 'https://blaq.ainative.studio/services/web-dev',
+        item: 'https://northboundstudio.co/services/web-dev',
       },
     ],
   };
@@ -98,17 +98,17 @@ export default function WebDevPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    '@id': 'https://blaq.ainative.studio/services/web-dev#service',
+    '@id': 'https://northboundstudio.co/services/web-dev#service',
     name: 'Modern Web Development',
     description: 'High-performance web platforms built with Next.js, React, and TypeScript. Full-stack development services including API-first architecture, performance optimization, and responsive design.',
     provider: {
       '@type': 'Organization',
-      '@id': 'https://blaq.ainative.studio/#organization',
-      name: 'Blaq Digital',
+      '@id': 'https://northboundstudio.co/#organization',
+      name: 'Northbound Studio',
     },
     serviceType: 'Modern web development',
     areaServed: 'US',
-    url: 'https://blaq.ainative.studio/services/web-dev',
+    url: 'https://northboundstudio.co/services/web-dev',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Web Development Services',

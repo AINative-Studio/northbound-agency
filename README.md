@@ -1,4 +1,4 @@
-# Blaq Digital - AINative Reseller Platform
+# Northbound Studio - AINative Reseller Platform
 
 A Next.js-based reseller platform for AINative services, targeting the Black entertainment industry. This platform enables resellers to offer AI-powered services including RAG chatbots, semantic search, multimodal AI APIs, and analytics to their clients.
 
@@ -16,33 +16,51 @@ npm run dev
 
 ## Environment Setup
 
-Create a `.env.local` file with the following variables:
+### Quick Setup
 
-```bash
-# AINative API Configuration
-NEXT_PUBLIC_AINATIVE_API_URL="https://api.ainative.studio"
-AINATIVE_API_KEY="your_api_key_here"
+1. **Copy the environment template**:
+   ```bash
+   cp .env.example .env.local
+   ```
 
-# ZeroDB Configuration
-NEXT_PUBLIC_ZERODB_PROJECT_ID="blaq-digital-prod"
-ZERODB_API_KEY="your_zerodb_api_key"
+2. **Add your credentials** to `.env.local`:
+   ```bash
+   # Resend API (for contact form emails)
+   RESEND_API_KEY=re_your_api_key_here
 
-# Authentication
-NEXTAUTH_SECRET="generate_random_secret_32_chars_min"
-NEXTAUTH_URL="http://localhost:3000"  # Update for production
+   # ZeroDB/AINative API
+   ZERODB_USERNAME=your_email@example.com
+   ZERODB_PASSWORD=your_password
+   ZERODB_API_URL=https://api.ainative.studio/
+   ZERODB_API_TOKEN=your_token
 
-# Optional: Analytics
-NEXT_PUBLIC_GA_ID="your_google_analytics_id"
-```
+   # Public API Configuration
+   NEXT_PUBLIC_AINATIVE_API_URL=https://api.ainative.studio
+   NEXT_PUBLIC_AINATIVE_API_KEY=your_public_api_key
+   NEXT_PUBLIC_ZERODB_PROJECT_ID=northbound-studio-prod
+   ```
 
-### Required Environment Variables for Production
+3. **Get API credentials**:
+   - **Resend**: Sign up at [resend.com](https://resend.com) and create an API key
+   - **ZeroDB/AINative**: Contact AINative support for credentials
 
-For Railway deployment, ensure these are set:
-- `NEXT_PUBLIC_AINATIVE_API_URL` - AINative API base URL
-- `AINATIVE_API_KEY` - Your AINative API key (contact AINative support)
-- `NEXT_PUBLIC_ZERODB_PROJECT_ID` - ZeroDB project ID
-- `NEXTAUTH_SECRET` - Random secret for session encryption
-- `NEXTAUTH_URL` - Your production URL (e.g., `https://blaq.ainative.studio`)
+### Full Documentation
+
+For comprehensive setup instructions, see:
+- **[Environment Variables Guide](docs/deployment/ENVIRONMENT_VARIABLES.md)** - Complete configuration reference
+- **[Railway Deployment Guide](docs/deployment/RAILWAY_SETUP.md)** - Production deployment walkthrough
+
+### Required Environment Variables
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `RESEND_API_KEY` | Yes | API key for contact form email notifications |
+| `ZERODB_USERNAME` | Yes | ZeroDB authentication username |
+| `ZERODB_PASSWORD` | Yes | ZeroDB authentication password |
+| `ZERODB_API_TOKEN` | Yes | ZeroDB API token |
+| `NEXT_PUBLIC_ZERODB_PROJECT_ID` | Yes | ZeroDB project identifier |
+| `CONTACT_EMAIL_TO` | No | Contact form recipient (default: contact@northboundstudios.co) |
+| `CONTACT_EMAIL_FROM` | No | Email sender address (default: noreply@northboundstudios.co) |
 
 ## REST API Integration
 
@@ -71,8 +89,15 @@ const results = await zerodb.searchSimilarText(
 
 ## Documentation
 
+### API Integration
 - **REST API Guide**: `docs/api/REST_API_INTEGRATION.md`
 - **Quick Reference**: `docs/api/QUICK_REFERENCE.md`
+
+### Deployment & Configuration
+- **Railway Setup**: `docs/deployment/RAILWAY_SETUP.md`
+- **Environment Variables**: `docs/deployment/ENVIRONMENT_VARIABLES.md`
+
+### Development Standards
 - **Coding Standards**: `.ainative/RULES.MD`
 - **Git Workflow**: `.ainative/git-rules.md`
 - **File Placement**: `.ainative/CRITICAL_FILE_PLACEMENT_RULES.md`
@@ -109,42 +134,49 @@ blaq_digital/
 
 This project is configured for Railway deployment with custom subdomain support.
 
-**Production URL**: `https://blaq.ainative.studio`
+**Production URL**: `https://northboundstudio.co`
 
-#### Railway Setup Steps
+**QUICK START**: See **[Railway Deployment Guide](docs/deployment/RAILWAY_SETUP.md)** for complete setup instructions.
 
-1. **Connect Repository**:
-   - Link GitHub repo: `https://github.com/urbantech/blaq_digital`
-   - Select main branch for deployment
+#### Quick Railway Setup
+
+1. **Install Railway CLI**:
+   ```bash
+   npm i -g @railway/cli
+   railway login
+   railway link
+   ```
 
 2. **Configure Environment Variables**:
    ```bash
-   NEXT_PUBLIC_AINATIVE_API_URL=https://api.ainative.studio
-   AINATIVE_API_KEY=<obtain_from_ainative_team>
-   NEXT_PUBLIC_ZERODB_PROJECT_ID=blaq-digital-prod
-   ZERODB_API_KEY=<obtain_from_ainative_team>
-   NEXTAUTH_SECRET=<generate_random_32_char_secret>
-   NEXTAUTH_URL=https://blaq.ainative.studio
-   NODE_ENV=production
+   # Method 1: Railway Dashboard
+   # Go to Variables tab and add each variable
+
+   # Method 2: Railway CLI
+   railway variables set RESEND_API_KEY=re_xxxxx
+   railway variables set ZERODB_USERNAME=your_username
+   railway variables set ZERODB_PASSWORD=your_password
+   railway variables set ZERODB_API_TOKEN=your_token
+   railway variables set NEXT_PUBLIC_ZERODB_PROJECT_ID=northbound-studio-prod
    ```
 
-3. **Custom Domain Setup**:
-   - Add custom domain: `blaq.ainative.studio`
-   - Configure CNAME record in AINative DNS:
-     ```
-     Type: CNAME
-     Name: blaq
-     Value: <railway_generated_domain>
-     ```
+   See [RAILWAY_SETUP.md](docs/deployment/RAILWAY_SETUP.md) for complete variable list.
 
-4. **Build Configuration**:
-   - Build Command: `npm run build`
-   - Start Command: `npm start`
-   - Port: 3000 (auto-detected)
+3. **Deploy**:
+   ```bash
+   railway up
+   ```
 
-5. **Health Check**:
-   - Path: `/api/health`
-   - Expected: 200 OK response
+4. **Verify Deployment**:
+   - Check logs: `railway logs`
+   - Test contact form at production URL
+   - Verify email delivery
+
+#### Documentation
+
+- **[Railway Setup Guide](docs/deployment/RAILWAY_SETUP.md)** - Complete deployment walkthrough
+- **[Environment Variables](docs/deployment/ENVIRONMENT_VARIABLES.md)** - Configuration reference
+- **[Troubleshooting](docs/deployment/RAILWAY_SETUP.md#troubleshooting)** - Common issues and solutions
 
 #### Alternative Deployment Options
 
@@ -351,7 +383,7 @@ Response to Client
 | Route | Purpose |
 |-------|---------|
 | `/` | Homepage with hero video and service overview |
-| `/about` | About Blaq Digital and team |
+| `/about` | About Northbound Studio and team |
 | `/services` | Services landing page |
 | `/services/ai-apps` | AI application development services |
 | `/work` | Portfolio and case studies |

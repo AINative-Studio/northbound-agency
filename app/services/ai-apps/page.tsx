@@ -5,18 +5,18 @@ import { Card, CardContent } from '@/components/ui/card';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Custom AI Application Development & Enterprise AI Solutions | Blaq Digital',
+  title: 'Custom AI Application Development & Enterprise AI Solutions | Northbound Studio',
   description: 'Build custom AI applications with RAG systems, chatbots, and intelligent automation. Enterprise AI solutions tailored for media and entertainment companies.',
   keywords: ['Custom AI application development', 'Enterprise AI solutions', 'RAG systems', 'AI chatbots', 'Intelligent automation', 'AI development'],
   openGraph: {
-    title: 'Custom AI Application Development & Enterprise AI Solutions | Blaq Digital',
+    title: 'Custom AI Application Development & Enterprise AI Solutions | Northbound Studio',
     description: 'Build custom AI applications with RAG systems, chatbots, and intelligent automation. Enterprise AI solutions tailored for media and entertainment companies.',
-    url: 'https://blaq.ainative.studio/services/ai-apps',
+    url: 'https://northboundstudio.co/services/ai-apps',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Custom AI Application Development & Enterprise AI Solutions | Blaq Digital',
+    title: 'Custom AI Application Development & Enterprise AI Solutions | Northbound Studio',
     description: 'Build custom AI applications with RAG systems, chatbots, and intelligent automation. Enterprise AI solutions tailored for media and entertainment companies.',
   },
 };
@@ -64,19 +64,19 @@ export default function AIAppsPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://blaq.ainative.studio',
+        item: 'https://northboundstudio.co',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Services',
-        item: 'https://blaq.ainative.studio/services',
+        item: 'https://northboundstudio.co/services',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'AI App Development',
-        item: 'https://blaq.ainative.studio/services/ai-apps',
+        item: 'https://northboundstudio.co/services/ai-apps',
       },
     ],
   };
@@ -84,17 +84,17 @@ export default function AIAppsPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    '@id': 'https://blaq.ainative.studio/services/ai-apps#service',
+    '@id': 'https://northboundstudio.co/services/ai-apps#service',
     name: 'Custom AI Application Development',
     description: 'Enterprise AI solutions including RAG systems, conversational AI, chatbots, and intelligent automation tailored for media and entertainment companies.',
     provider: {
       '@type': 'Organization',
-      '@id': 'https://blaq.ainative.studio/#organization',
-      name: 'Blaq Digital',
+      '@id': 'https://northboundstudio.co/#organization',
+      name: 'Northbound Studio',
     },
     serviceType: 'Custom AI application development',
     areaServed: 'US',
-    url: 'https://blaq.ainative.studio/services/ai-apps',
+    url: 'https://northboundstudio.co/services/ai-apps',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'AI Development Services',

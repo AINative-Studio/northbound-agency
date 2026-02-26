@@ -55,10 +55,34 @@ git checkout -b chore/789-update-deps
 - Include: Problem, Solution, Test Plan, Risk/Rollback
 - Small PRs: ≤300 LOC changed ideally
 
+## Before Starting Work on an Issue
+
+**MANDATORY STEP**: Assign the issue to yourself BEFORE any work begins.
+
+```bash
+# Get current GitHub CLI username
+gh api user --jq '.login'
+
+# Assign issue to yourself
+gh issue edit <issue-number> --add-assignee <your-username>
+
+# Example:
+gh issue edit 123 --add-assignee urbantech
+```
+
+**Why**: This prevents duplicate work, shows ownership, and maintains clear accountability.
+
+**When to assign**:
+- ✅ BEFORE creating a branch
+- ✅ BEFORE writing any code
+- ✅ BEFORE committing changes
+- ❌ NOT after closing the issue
+
 ## Before Every Commit
 
-1. Check for AI attribution text
-2. Remove any forbidden text
-3. Use clean, professional message
+1. Verify issue is assigned to you
+2. Check for AI attribution text
+3. Remove any forbidden text
+4. Use clean, professional message
 
 Invoke this skill when creating commits, PRs, or managing branches.

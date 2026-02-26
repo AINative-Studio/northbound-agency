@@ -1,8 +1,8 @@
-# Blaq Digital → ZeroDB + AINative Authentication Migration Plan
+# Northbound Studio → ZeroDB + AINative Authentication Migration Plan
 
 ## Executive Summary
 
-This document outlines the complete migration strategy for transitioning Blaq Digital from Supabase to ZeroDB with AINative authentication. The site will be deployed as a subdomain: `blaq.ainative.studio`.
+This document outlines the complete migration strategy for transitioning Northbound Studio from Supabase to ZeroDB with AINative authentication. The site will be deployed as a subdomain: `northboundstudio.co`.
 
 **Migration Scope:**
 - Remove all Supabase dependencies and operations
@@ -436,7 +436,7 @@ async function setupRAGCollection() {
 **Initial Data to Vectorize:**
 
 Topics to include in knowledge base:
-- Blaq Digital services (AI Apps, RAG Bots, Conversational Media, Web Platforms)
+- Northbound Studio services (AI Apps, RAG Bots, Conversational Media, Web Platforms)
 - Company differentiators (AI-Native, Culture-First, Ownership-Driven, Engineering-Led)
 - AI and Black media industry knowledge
 - Technical capabilities (Next.js, React, TypeScript, AI/ML)
@@ -764,7 +764,7 @@ import { Button } from '@/core/components/ui/button';
 **Current:** `@/components/navigation`
 **Target:** `@/core/components/navigation`
 
-**Issue:** AIKit Navigation uses React Router, Blaq Digital uses Next.js
+**Issue:** AIKit Navigation uses React Router, Northbound Studio uses Next.js
 
 **Adaptation required:**
 ```typescript
@@ -778,7 +778,7 @@ import Link from 'next/link';
 ```
 
 **Acceptance Criteria:**
-- [ ] AIKit Navigation component copied to Blaq Digital
+- [ ] AIKit Navigation component copied to Northbound Studio
 - [ ] All React Router Links converted to Next.js Links
 - [ ] `to` prop replaced with `href` prop
 - [ ] Navigation functionality tested

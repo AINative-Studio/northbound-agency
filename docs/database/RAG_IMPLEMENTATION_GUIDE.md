@@ -4,7 +4,7 @@
 
 **Phase 2.2: Create RAG Vector Collection - blaq_knowledge_base**
 
-This document outlines the complete implementation of the RAG vector collection for Blaq Digital's knowledge base system.
+This document outlines the complete implementation of the RAG vector collection for Northbound Studio's knowledge base system.
 
 ## What Has Been Created
 
@@ -154,7 +154,7 @@ npm run seed:kb
 npm run test:vectors
 
 # Test single query
-npm run test:vectors -- --query "What does Blaq Digital do?"
+npm run test:vectors -- --query "What does Northbound Studio do?"
 
 # Test with custom top-k
 npm run test:vectors -- --query "pricing" --top-k 3
@@ -315,4 +315,4 @@ The RAG vector collection infrastructure for `blaq_knowledge_base` is fully desi
 **Last Updated:** 2026-01-30
 **Version:** 1.0
 **Status:** Infrastructure Complete - Awaiting API Availability
-**Maintained By:** Blaq Digital Engineering Team
+**Maintained By:** Northbound Studio Engineering Team

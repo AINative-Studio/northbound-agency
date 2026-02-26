@@ -3,7 +3,7 @@ import { Brain, MessageSquare } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const ragPrompts = [
-  "What does Blaq Digital do?",
+  "What does Northbound Studio do?",
   "How does RAG work?",
   "Can you build AI chatbots for media companies?",
   "What's the difference between RAG and regular chatbots?",
@@ -11,7 +11,7 @@ const ragPrompts = [
 
 const chatbotPrompts = [
   "Tell me about your AI services",
-  "What makes Blaq Digital different?",
+  "What makes Northbound Studio different?",
   "How can AI help my media business?",
   "What's your typical project timeline?",
 ];
@@ -25,7 +25,7 @@ export default function DemosPage() {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1>AI Demos</h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Experience the power of AI firsthand. Try our intelligent chatbots trained on Blaq Digital knowledge and see how conversational AI can transform your business.
+              Experience the power of AI firsthand. Try our intelligent chatbots trained on Northbound Studio knowledge and see how conversational AI can transform your business.
             </p>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function DemosPage() {
                 <h2 className="text-3xl md:text-4xl font-bold">RAG-Powered Assistant</h2>
                 <p className="text-lg text-muted-foreground">
                   This chatbot uses Retrieval-Augmented Generation to provide accurate, knowledge-grounded responses
-                  about Blaq Digital's services and AI capabilities.
+                  about Northbound Studio's services and AI capabilities.
                 </p>
                 <div className="bg-card/30 rounded-lg border border-border/50 p-6 text-left">
                   <h3 className="font-semibold mb-2 flex items-center gap-2">

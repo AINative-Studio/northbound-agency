@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides comprehensive documentation for the protected admin API routes in the Blaq Digital application. All endpoints require authentication via AINative Auth and implement security best practices including rate limiting, input validation, and XSS prevention.
+This document provides comprehensive documentation for the protected admin API routes in the Northbound Studio application. All endpoints require authentication via AINative Auth and implement security best practices including rate limiting, input validation, and XSS prevention.
 
 ---
 

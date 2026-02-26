@@ -3,8 +3,8 @@ import { zerodb } from '../lib/zerodb';
 // Knowledge base content to seed into vectors
 const knowledgeBase = [
   {
-    id: 'what-does-blaq-digital-do',
-    text: `Blaq Digital is a hybrid studio at the intersection of AI, media, and Black culture. We build intelligent media systems - not just marketing content.
+    id: 'what-does-northbound-studio-do',
+    text: `Northbound Studio is a hybrid studio at the intersection of AI, media, and Black culture. We build intelligent media systems - not just marketing content.
 
 Our core offerings:
 - AI Apps: Custom AI applications built for your specific needs
@@ -36,7 +36,7 @@ Why RAG is powerful:
 - Perfect for knowledge bases, documentation, customer support
 - Maintains context and retrieves only relevant information
 
-This chatbot uses RAG to answer questions about Blaq Digital using our knowledge base.`,
+This chatbot uses RAG to answer questions about Northbound Studio using our knowledge base.`,
     metadata: {
       topic: 'rag technology',
       category: 'technical',
@@ -70,7 +70,7 @@ We don't just deploy generic chatbots - we build AI systems that understand your
   },
   {
     id: 'full-services',
-    text: `Blaq Digital offers comprehensive AI and development services:
+    text: `Northbound Studio offers comprehensive AI and development services:
 
 AI & ML Solutions:
 - Custom AI applications tailored to your needs
@@ -105,7 +105,7 @@ We deliver secure, compliant solutions with measurable business value within wee
   },
   {
     id: 'what-makes-us-different',
-    text: `Blaq Digital is different from traditional agencies and generic AI companies:
+    text: `Northbound Studio is different from traditional agencies and generic AI companies:
 
 AI-Native: We build with AI-first thinking from the ground up. AI isn't a feature we bolt on - it's fundamental to our architecture and approach.
 

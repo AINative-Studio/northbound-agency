@@ -51,7 +51,7 @@ npm run seed:kb:enhanced
 npm run test:vectors
 
 # Test single query
-npm run test:vectors -- --query "What does Blaq Digital do?"
+npm run test:vectors -- --query "What does Northbound Studio do?"
 ```
 
 ---
@@ -159,7 +159,7 @@ POST /v1/public/zerodb/vectors/upsert
 ```bash
 NEXT_PUBLIC_AINATIVE_API_URL="https://api.ainative.studio"
 NEXT_PUBLIC_AINATIVE_API_KEY="..."
-NEXT_PUBLIC_ZERODB_PROJECT_ID="blaq-digital-prod"
+NEXT_PUBLIC_ZERODB_PROJECT_ID="northbound-studio-prod"
 ```
 
 ---

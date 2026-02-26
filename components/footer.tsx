@@ -33,7 +33,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 group mb-4">
               <Sparkles className="h-6 w-6 text-primary group-hover:text-green-400 transition-colors" />
-              <span className="text-xl font-bold">Blaq Digital</span>
+              <span className="text-xl font-bold">Northbound Studio</span>
             </Link>
             <p className="text-muted-foreground max-w-md mb-6">
               AI-native digital studio building the future of media, entertainment, and culture through intelligent systems.
@@ -103,7 +103,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border/50">
           <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} Blaq Digital. All rights reserved.
+            © {new Date().getFullYear()} Northbound Studio. All rights reserved.
           </p>
         </div>
       </div>

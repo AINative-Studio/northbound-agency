@@ -1,5 +1,5 @@
 /**
- * Robots.txt Configuration for Blaq Digital
+ * Robots.txt Configuration for Northbound Studio
  *
  * Configures search engine crawler access control
  * - Allows all search engines to crawl public content
@@ -12,18 +12,16 @@
 import { MetadataRoute } from 'next'
 
 /**
- * Base URL for the Blaq Digital website
+ * Base URL for the Northbound Studio website
  */
-const BASE_URL = 'https://blaq.ainative.studio'
+const BASE_URL = 'https://northboundstudio.co'
 
 /**
  * Routes that should be blocked from search engine indexing
  * These are sensitive or internal routes that should not appear in search results
  */
 const BLOCKED_ROUTES: string[] = [
-  '/api/',      // API endpoints
-  '/admin/',    // Admin dashboard
-  '/login/',    // Authentication pages
+  '/admin/*',   // Admin dashboard and all admin routes
 ]
 
 /**

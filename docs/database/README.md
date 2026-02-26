@@ -1,8 +1,8 @@
-# Blaq Digital Database Documentation
+# Northbound Studio Database Documentation
 
 ## Overview
 
-This directory contains comprehensive documentation for all database systems used in the Blaq Digital project, including vector collections for RAG (Retrieval-Augmented Generation) and NoSQL tables for application data.
+This directory contains comprehensive documentation for all database systems used in the Northbound Studio project, including vector collections for RAG (Retrieval-Augmented Generation) and NoSQL tables for application data.
 
 ## Documentation Files
 
@@ -229,7 +229,7 @@ POST /v1/public/zerodb/tables/{tableName}/query
 # Public (exposed to browser)
 NEXT_PUBLIC_AINATIVE_API_URL="https://api.ainative.studio"
 NEXT_PUBLIC_AINATIVE_API_KEY="..."
-NEXT_PUBLIC_ZERODB_PROJECT_ID="blaq-digital-prod"
+NEXT_PUBLIC_ZERODB_PROJECT_ID="northbound-studio-prod"
 
 # Server-side only
 ZERODB_API_TOKEN="..."
@@ -359,4 +359,4 @@ For ZeroDB/AINative API support:
 
 **Last Updated:** 2026-01-30
 **Status:** Infrastructure Complete - Ready for Deployment
-**Maintained By:** Blaq Digital Engineering Team
+**Maintained By:** Northbound Studio Engineering Team

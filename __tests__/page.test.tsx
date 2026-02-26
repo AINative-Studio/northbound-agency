@@ -37,7 +37,7 @@ jest.mock('lucide-react', () => ({
 describe('Homepage Metadata', () => {
   describe('Basic Metadata', () => {
     it('should have proper page title optimized for SEO', () => {
-      expect(metadata.title).toBe('Blaq Digital | AI-Native Digital Media Agency for Black Entertainment');
+      expect(metadata.title).toBe('Northbound Studio | AI-Native Digital Media Agency for Black Entertainment');
       expect(metadata.title).toContain('AI-Native');
       expect(metadata.title).toContain('Black Entertainment');
     });
@@ -80,17 +80,17 @@ describe('Homepage Metadata', () => {
     });
 
     it('should have canonical URL', () => {
-      expect(metadata.alternates?.canonical).toBe('https://blaq.ainative.studio');
+      expect(metadata.alternates?.canonical).toBe('https://northboundstudio.co');
     });
   });
 
   describe('OpenGraph Metadata', () => {
     it('should have complete OpenGraph configuration', () => {
       expect(metadata.openGraph).toBeDefined();
-      expect(metadata.openGraph?.title).toBe('Blaq Digital | AI-Native Digital Media Agency for Black Entertainment');
+      expect(metadata.openGraph?.title).toBe('Northbound Studio | AI-Native Digital Media Agency for Black Entertainment');
       expect(metadata.openGraph?.description).toContain('AI-native digital agency');
-      expect(metadata.openGraph?.url).toBe('https://blaq.ainative.studio');
-      expect(metadata.openGraph?.siteName).toBe('Blaq Digital');
+      expect(metadata.openGraph?.url).toBe('https://northboundstudio.co');
+      expect(metadata.openGraph?.siteName).toBe('Northbound Studio');
       expect(metadata.openGraph?.type).toBe('website');
       expect(metadata.openGraph?.locale).toBe('en_US');
     });
@@ -104,7 +104,7 @@ describe('Homepage Metadata', () => {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: expect.stringContaining('Blaq Digital'),
+        alt: expect.stringContaining('Northbound Studio'),
       });
     });
   });
@@ -113,7 +113,7 @@ describe('Homepage Metadata', () => {
     it('should have complete Twitter Card configuration', () => {
       expect(metadata.twitter).toBeDefined();
       expect(metadata.twitter?.card).toBe('summary_large_image');
-      expect(metadata.twitter?.title).toBe('Blaq Digital | AI-Native Digital Media Agency for Black Entertainment');
+      expect(metadata.twitter?.title).toBe('Northbound Studio | AI-Native Digital Media Agency for Black Entertainment');
       expect(metadata.twitter?.description).toContain('AI-native digital agency');
     });
 
@@ -124,7 +124,7 @@ describe('Homepage Metadata', () => {
     });
 
     it('should have Twitter creator handle', () => {
-      expect(metadata.twitter?.creator).toBe('@blaqdigital');
+      expect(metadata.twitter?.creator).toBe('@northboundstudio');
     });
   });
 });
@@ -155,8 +155,8 @@ describe('Schema.org Structured Data', () => {
 
       expect(schema['@context']).toBe('https://schema.org');
       expect(schema['@type']).toBe('Organization');
-      expect(schema.name).toBe('Blaq Digital');
-      expect(schema.url).toBe('https://blaq.ainative.studio');
+      expect(schema.name).toBe('Northbound Studio');
+      expect(schema.url).toBe('https://northboundstudio.co');
       expect(schema.logo).toContain('logo.png');
       expect(schema.description).toContain('AI-native digital agency');
     });
@@ -247,9 +247,9 @@ describe('Schema.org Structured Data', () => {
       const schema = JSON.parse(localBusinessScript!.innerHTML);
       expect(schema['@context']).toBe('https://schema.org');
       expect(schema['@type']).toBe('LocalBusiness');
-      expect(schema['@id']).toBe('https://blaq.ainative.studio');
-      expect(schema.name).toBe('Blaq Digital');
-      expect(schema.url).toBe('https://blaq.ainative.studio');
+      expect(schema['@id']).toBe('https://northboundstudio.co');
+      expect(schema.name).toBe('Northbound Studio');
+      expect(schema.url).toBe('https://northboundstudio.co');
     });
 
     it('should have LocalBusiness contact information', () => {
@@ -327,8 +327,8 @@ describe('Schema.org Structured Data', () => {
       const schema = JSON.parse(websiteScript!.innerHTML);
       expect(schema['@context']).toBe('https://schema.org');
       expect(schema['@type']).toBe('WebSite');
-      expect(schema.name).toBe('Blaq Digital');
-      expect(schema.url).toBe('https://blaq.ainative.studio');
+      expect(schema.name).toBe('Northbound Studio');
+      expect(schema.url).toBe('https://northboundstudio.co');
     });
 
     it('should have WebSite description', () => {
@@ -386,7 +386,7 @@ describe('Homepage Content', () => {
   });
 
   it('should render differentiators section', () => {
-    expect(screen.getByText(/Why Blaq Digital/i)).toBeInTheDocument();
+    expect(screen.getByText(/Why Northbound Studio/i)).toBeInTheDocument();
     expect(screen.getAllByText(/AI-Native/i).length).toBeGreaterThan(0);
     expect(screen.getByText(/Culture-First/i)).toBeInTheDocument();
     expect(screen.getByText(/Ownership-Driven/i)).toBeInTheDocument();

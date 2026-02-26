@@ -40,8 +40,8 @@ describe('Environment Variables Configuration', () => {
 
     test('should have default values for email addresses', () => {
       const content = readFileSync(envExamplePath, 'utf-8');
-      expect(content).toContain('CONTACT_EMAIL_TO=contact@blaqdigital.com');
-      expect(content).toContain('CONTACT_EMAIL_FROM=noreply@blaqdigital.com');
+      expect(content).toContain('CONTACT_EMAIL_TO=contact@northboundstudios.co');
+      expect(content).toContain('CONTACT_EMAIL_FROM=noreply@northboundstudios.co');
     });
 
     test('should NOT contain actual API keys or passwords', () => {

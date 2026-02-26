@@ -1,8 +1,8 @@
-# RAG System Architecture - Blaq Digital
+# RAG System Architecture - Northbound Studio
 
 ## Overview
 
-This document describes the production-ready Retrieval-Augmented Generation (RAG) system implemented for Blaq Digital's AI chatbot. The system uses ZeroDB vector search to provide accurate, context-aware responses grounded in the company's knowledge base.
+This document describes the production-ready Retrieval-Augmented Generation (RAG) system implemented for Northbound Studio's AI chatbot. The system uses ZeroDB vector search to provide accurate, context-aware responses grounded in the company's knowledge base.
 
 ## System Architecture
 
@@ -150,7 +150,7 @@ Integrate with LLM (Claude, GPT-4, etc.) for natural language generation:
 ```typescript
 // Future implementation
 const llmResponse = await claudeAPI.generate({
-  system: `You are a helpful assistant for Blaq Digital. Use this context: ${context}`,
+  system: `You are a helpful assistant for Northbound Studio. Use this context: ${context}`,
   user: message,
   temperature: 0.7,
   max_tokens: 500
@@ -201,7 +201,7 @@ await zerodb.storeMemory({
 ### Current Knowledge Base Topics
 
 1. **Company Overview**
-   - What Blaq Digital does
+   - What Northbound Studio does
    - Core offerings
    - Company identity
 
@@ -260,7 +260,7 @@ npx tsx scripts/seed-knowledge-base.ts
 **Request Body:**
 ```json
 {
-  "message": "What does Blaq Digital do?",
+  "message": "What does Northbound Studio do?",
   "type": "rag" | "chatbot"
 }
 ```
@@ -277,7 +277,7 @@ npx tsx scripts/seed-knowledge-base.ts
   },
   "sources": [
     {
-      "text": "Blaq Digital is a hybrid studio...",
+      "text": "Northbound Studio is a hybrid studio...",
       "score": 0.92,
       "topic": "company overview"
     }
@@ -304,7 +304,7 @@ npx tsx scripts/seed-knowledge-base.ts
   "sessionId": "session_1234567890_abc123",
   "history": [
     {
-      "message": "What does Blaq Digital do?",
+      "message": "What does Northbound Studio do?",
       "response": "...",
       "timestamp": "2026-01-30T21:00:00Z"
     }
@@ -434,7 +434,7 @@ console.error('[RAG] Chat API error:', error);
 # ZeroDB Configuration
 NEXT_PUBLIC_AINATIVE_API_URL="https://api.ainative.studio"
 NEXT_PUBLIC_AINATIVE_API_KEY="<api_key>"
-NEXT_PUBLIC_ZERODB_PROJECT_ID="blaq-digital-prod"
+NEXT_PUBLIC_ZERODB_PROJECT_ID="northbound-studio-prod"
 
 # Server-side (for admin operations)
 ZERODB_USERNAME="admin@ainative.studio"
@@ -452,7 +452,7 @@ npm run dev
 # Test chat endpoint
 curl -X POST http://localhost:3456/api/chat \
   -H "Content-Type: application/json" \
-  -d '{"message": "What does Blaq Digital do?", "type": "rag"}'
+  -d '{"message": "What does Northbound Studio do?", "type": "rag"}'
 
 # Test conversation history
 curl -X GET "http://localhost:3456/api/chat?limit=10" \
@@ -460,7 +460,7 @@ curl -X GET "http://localhost:3456/api/chat?limit=10" \
 ```
 
 ### Test Cases
-1. **High relevance query:** "What does Blaq Digital do?"
+1. **High relevance query:** "What does Northbound Studio do?"
 2. **Technical query:** "How does RAG work?"
 3. **Service query:** "Tell me about AI chatbot development"
 4. **Pricing query:** "What are your pricing and timelines?"
@@ -517,7 +517,7 @@ curl -X GET "http://localhost:3456/api/chat?limit=10" \
 
 ## Conclusion
 
-This RAG system provides Blaq Digital with a production-ready, scalable, and maintainable solution for AI-powered customer interactions. The architecture balances accuracy, performance, and user experience while maintaining flexibility for future enhancements.
+This RAG system provides Northbound Studio with a production-ready, scalable, and maintainable solution for AI-powered customer interactions. The architecture balances accuracy, performance, and user experience while maintaining flexibility for future enhancements.
 
 **Key Achievements:**
 - Production-ready vector search integration
