@@ -48,7 +48,7 @@ async function semanticSearch(query: string, limit: number = 5): Promise<Semanti
         body: JSON.stringify({
           query,
           limit,
-          threshold: 0.6, // 60% similarity threshold
+          threshold: 0.3, // 30% similarity threshold (lowered from 0.6 for better recall)
           namespace: 'northbound_knowledge_base',
           model: 'BAAI/bge-small-en-v1.5',
         }),
