@@ -16,10 +16,14 @@ const API_KEY = process.env.NEXT_PUBLIC_AINATIVE_API_KEY;
 const PROJECT_ID = process.env.NEXT_PUBLIC_ZERODB_PROJECT_ID || 'northbound-studio-prod';
 
 interface SemanticSearchResult {
-  id: string;
-  score: number;
-  text: string;
+  id?: string;
+  vector_id?: string;
+  score?: number;
+  document: string;  // ZeroDB API returns "document" not "text"
   metadata?: Record<string, any>;
+  vector_metadata?: any;
+  namespace?: string;
+  project_id?: string;
 }
 
 interface SemanticSearchResponse {
@@ -93,7 +97,12 @@ async function generateChatCompletion(
           messages: [
             {
               role: 'system',
-              content: `You are Cody, a helpful and knowledgeable AI assistant for Northbound Studio. We operate from Los Angeles (HQ), San Francisco (Tech Hub), and Atlanta (entertainment hub). You provide accurate, professional, and friendly answers about our AI development services, RAG systems, and web development solutions. Use the following context to answer the user's question:\n\n${context}`,
+              content: `You are Cody, a helpful and knowledgeable AI assistant for Northbound Studio. We operate from Los Angeles (HQ), San Francisco (Tech Hub), and Atlanta (entertainment hub).
+
+IMPORTANT: Answer the user's question using ONLY the information provided in the context below. If the context contains the answer, provide it directly and accurately. Do not add information that is not in the context.
+
+Context:
+${context}`,
             },
             {
               role: 'user',
@@ -139,7 +148,7 @@ async function generateResponse(message: string, type: string): Promise<{
     const context = searchResults.results
       .map((result, index) => {
         const metadata = result.metadata ? ` (${result.metadata.topic || 'general'})` : '';
-        return `[Source ${index + 1}${metadata}]:\n${result.text}`;
+        return `[Source ${index + 1}${metadata}]:\n${result.document}`;
       })
       .join('\n\n');
 
