@@ -71,12 +71,22 @@ async function generateChatCompletion(
   context: string
 ): Promise<string | null> {
   try {
+    // Use Meta Llama API directly (OpenAI-compatible)
+    const META_API_KEY = process.env.META_API_KEY;
+    const META_BASE_URL = process.env.META_BASE_URL || 'https://api.llama.com/compat/v1';
+    const META_MODEL = process.env.META_MODEL || 'Llama-4-Maverick-17B-128E-Instruct-FP8';
+
+    if (!META_API_KEY) {
+      console.error('[Chat Completion] META_API_KEY not configured');
+      return null;
+    }
+
     const response = await fetch(
-      `${API_BASE_URL}/v1/public/chat/completions`,
+      `${META_BASE_URL}/chat/completions`,
       {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${API_KEY}`,
+          'Authorization': `Bearer ${META_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -90,7 +100,7 @@ async function generateChatCompletion(
               content: userQuery,
             },
           ],
-          model: 'meta-llama/llama-3.1-70b-instruct', // Meta Llama for cost-effectiveness
+          model: META_MODEL,
           temperature: 0.7,
           max_tokens: 500,
           stream: false,
