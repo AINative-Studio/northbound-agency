@@ -67,7 +67,7 @@ interface SearchResult {
 }
 
 async function testVectorSearch() {
-  console.log('🧪 Testing Vector Search Functionality for blaq_knowledge_base\n');
+  console.log('🧪 Testing Vector Search Functionality for northbound_knowledge_base\n');
   console.log('=' .repeat(80));
   console.log('');
 
@@ -97,7 +97,7 @@ async function testVectorSearch() {
       try {
         // Search with top 3 results
         const results: SearchResult[] = await zerodb.searchSimilarText(
-          'blaq_knowledge_base',
+          'northbound_knowledge_base',
           test.query,
           3
         );
@@ -174,7 +174,7 @@ async function testVectorSearch() {
     console.log('');
     console.log('COLLECTION VALIDATION');
     console.log('=' .repeat(80));
-    console.log('Collection Name: blaq_knowledge_base');
+    console.log('Collection Name: northbound_knowledge_base');
     console.log('Vector Dimensions: 1536 (OpenAI text-embedding-3-small)');
     console.log('Similarity Metric: Cosine similarity');
     console.log('Minimum Score Threshold: 70%');
@@ -208,7 +208,7 @@ async function testSingleQuery(query: string, topK: number = 5) {
     if (!apiKey) throw new Error('API key not set');
 
     zerodb.setApiKey(apiKey);
-    const results = await zerodb.searchSimilarText('blaq_knowledge_base', query, topK);
+    const results = await zerodb.searchSimilarText('northbound_knowledge_base', query, topK);
 
     console.log(`Results (top ${topK}):\n`);
     results.forEach((result: SearchResult, idx: number) => {

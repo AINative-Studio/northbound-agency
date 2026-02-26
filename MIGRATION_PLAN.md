@@ -410,7 +410,7 @@ if (typeof window !== 'undefined') {
 ---
 
 #### Task 2.2: Create RAG Vector Collection
-**Collection:** `blaq_knowledge_base`
+**Collection:** `northbound_knowledge_base`
 
 **Purpose:** Store vectorized knowledge for RAG chatbot
 
@@ -421,7 +421,7 @@ import { zerodb } from '@/lib/zerodb';
 
 async function setupRAGCollection() {
   await zerodb.client.post('/v1/public/zerodb/collections', {
-    name: 'blaq_knowledge_base',
+    name: 'northbound_knowledge_base',
     dimension: 1536, // OpenAI text-embedding-3-small
     metric: 'cosine',
     metadata_schema: {
@@ -443,7 +443,7 @@ Topics to include in knowledge base:
 - Contact and engagement processes
 
 **Acceptance Criteria:**
-- [ ] `blaq_knowledge_base` collection created
+- [ ] `northbound_knowledge_base` collection created
 - [ ] Vector dimension set to 1536 (OpenAI embeddings)
 - [ ] Cosine similarity metric configured
 - [ ] Metadata schema defined
@@ -576,7 +576,7 @@ export async function POST(request: Request) {
 
     // Step 1: Vector search for relevant context
     const searchResults = await zerodb.searchSimilarText(
-      'blaq_knowledge_base',
+      'northbound_knowledge_base',
       message,
       5 // top 5 results
     );

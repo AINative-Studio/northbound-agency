@@ -2,7 +2,7 @@
 
 ## Current Status
 
-**Phase 2.2: Create RAG Vector Collection - blaq_knowledge_base**
+**Phase 2.2: Create RAG Vector Collection - northbound_knowledge_base**
 
 This document outlines the complete implementation of the RAG vector collection for Northbound Studio's knowledge base system.
 
@@ -10,7 +10,7 @@ This document outlines the complete implementation of the RAG vector collection 
 
 ### 1. Collection Schema Documentation
 - **Location:** `/docs/database/KNOWLEDGE_BASE_COLLECTION.md`
-- Complete technical specification for the `blaq_knowledge_base` collection
+- Complete technical specification for the `northbound_knowledge_base` collection
 - Metadata schema definition
 - API operation examples
 - Performance guidelines
@@ -49,7 +49,7 @@ This document outlines the complete implementation of the RAG vector collection 
 ### Technical Details
 
 ```
-Collection Name: blaq_knowledge_base
+Collection Name: northbound_knowledge_base
 Vector Dimensions: 1536 (OpenAI text-embedding-3-small)
 Similarity Metric: Cosine similarity
 Total Entries: 16 (enhanced version)
@@ -166,13 +166,13 @@ import { zerodb } from '@/lib/zerodb';
 
 // Search knowledge base
 const results = await zerodb.searchSimilarText(
-  'blaq_knowledge_base',
+  'northbound_knowledge_base',
   'How does RAG work?',
   5
 );
 
 // Add new content
-await zerodb.upsertVectors('blaq_knowledge_base', [
+await zerodb.upsertVectors('northbound_knowledge_base', [
   {
     id: 'new-entry',
     text: 'Content here...',
@@ -192,7 +192,7 @@ Based on GitHub Issue #5 requirements:
 
 | Criteria | Status | Notes |
 |----------|--------|-------|
-| Create blaq_knowledge_base collection | ⏳ Pending API | Schema designed, ready to create |
+| Create northbound_knowledge_base collection | ⏳ Pending API | Schema designed, ready to create |
 | Verify dimensions set to 1536 | ✅ Complete | Specified in all documentation |
 | Configure cosine similarity metric | ✅ Complete | Documented in spec |
 | Test vector insert operation | ⏳ Pending API | Script ready, awaiting endpoint |
@@ -298,7 +298,7 @@ For ZeroDB/AINative API support:
 
 ## Conclusion
 
-The RAG vector collection infrastructure for `blaq_knowledge_base` is fully designed and ready for implementation. All content, scripts, tests, and documentation are complete. The next step is resolving the API endpoint availability to proceed with actual data population and testing.
+The RAG vector collection infrastructure for `northbound_knowledge_base` is fully designed and ready for implementation. All content, scripts, tests, and documentation are complete. The next step is resolving the API endpoint availability to proceed with actual data population and testing.
 
 **Files Created:**
 - `/docs/database/KNOWLEDGE_BASE_COLLECTION.md` - Complete collection documentation

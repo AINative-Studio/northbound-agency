@@ -229,11 +229,11 @@ async function seedKnowledgeBase() {
     }));
 
     console.log(`Uploading ${vectors.length} knowledge base entries to ZeroDB...`);
-    console.log('Collection name: blaq_knowledge_base');
+    console.log('Collection name: northbound_knowledge_base');
     console.log('First vector sample:', JSON.stringify(vectors[0], null, 2));
 
-    // Upload all vectors to the blaq_knowledge_base collection
-    const result = await zerodb.upsertVectors('blaq_knowledge_base', vectors);
+    // Upload all vectors to the northbound_knowledge_base collection
+    const result = await zerodb.upsertVectors('northbound_knowledge_base', vectors);
 
     console.log('\n✅ Knowledge base seeded successfully!');
     console.log(`Response:`, JSON.stringify(result, null, 2));

@@ -1,4 +1,4 @@
-# RAG Vector Collection Summary - blaq_knowledge_base
+# RAG Vector Collection Summary - northbound_knowledge_base
 
 ## Quick Reference
 
@@ -32,7 +32,7 @@ All infrastructure, content, tests, and documentation are complete. Awaiting Zer
 ## Collection Specs
 
 ```
-Name: blaq_knowledge_base
+Name: northbound_knowledge_base
 Dimensions: 1536 (OpenAI text-embedding-3-small)
 Metric: Cosine similarity
 Entries: 16 comprehensive articles
@@ -63,13 +63,13 @@ import { zerodb } from '@/lib/zerodb';
 
 // Search
 const results = await zerodb.searchSimilarText(
-  'blaq_knowledge_base',
+  'northbound_knowledge_base',
   'your question',
   5
 );
 
 // Add content
-await zerodb.upsertVectors('blaq_knowledge_base', [
+await zerodb.upsertVectors('northbound_knowledge_base', [
   {
     id: 'entry-id',
     text: 'Content...',

@@ -45,7 +45,7 @@ async function semanticSearch(query: string, limit: number = 5): Promise<Semanti
           query,
           limit,
           threshold: 0.6, // 60% similarity threshold
-          namespace: 'blaq_knowledge_base',
+          namespace: 'northbound_knowledge_base',
           model: 'BAAI/bge-small-en-v1.5',
         }),
       }

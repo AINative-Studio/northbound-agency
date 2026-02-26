@@ -53,14 +53,14 @@ const sessionId = request.cookies.get('session_id')?.value ||
 **Endpoint:** `POST /v1/public/zerodb/vectors/search/text`
 
 **Parameters:**
-- `collection_name`: `blaq_knowledge_base`
+- `collection_name`: `northbound_knowledge_base`
 - `query_text`: User's normalized question
 - `top_k`: 5 (returns top 5 most similar documents)
 
 **Implementation:**
 ```typescript
 const searchResults = await zerodb.searchSimilarText(
-  'blaq_knowledge_base',
+  'northbound_knowledge_base',
   message,
   5 // Top 5 most relevant documents
 );
@@ -183,7 +183,7 @@ await zerodb.storeMemory({
 ## Knowledge Base Structure
 
 ### Collection Name
-`blaq_knowledge_base`
+`northbound_knowledge_base`
 
 ### Document Schema
 ```typescript

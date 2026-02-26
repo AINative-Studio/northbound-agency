@@ -2,13 +2,13 @@
 
 ## Overview
 
-The `blaq_knowledge_base` collection is a vector database designed for RAG (Retrieval-Augmented Generation) operations. It stores knowledge base content as embeddings for semantic search and AI-powered question answering.
+The `northbound_knowledge_base` collection is a vector database designed for RAG (Retrieval-Augmented Generation) operations. It stores knowledge base content as embeddings for semantic search and AI-powered question answering.
 
 ## Collection Configuration
 
 ### Technical Specifications
 
-- **Collection Name:** `blaq_knowledge_base`
+- **Collection Name:** `northbound_knowledge_base`
 - **Vector Dimensions:** 1536 (OpenAI text-embedding-3-small model)
 - **Similarity Metric:** Cosine similarity
 - **API Endpoint:** ZeroDB Vector Search API
@@ -98,7 +98,7 @@ The knowledge base is organized into the following categories:
 **Request:**
 ```json
 {
-  "collection_name": "blaq_knowledge_base",
+  "collection_name": "northbound_knowledge_base",
   "vectors": [
     {
       "id": "unique-identifier",
@@ -129,7 +129,7 @@ The knowledge base is organized into the following categories:
 **Request:**
 ```json
 {
-  "collection_name": "blaq_knowledge_base",
+  "collection_name": "northbound_knowledge_base",
   "query_text": "What services does Northbound Studio offer?",
   "top_k": 5
 }
@@ -162,13 +162,13 @@ import { zerodb } from '@/lib/zerodb';
 
 // Search knowledge base
 const results = await zerodb.searchSimilarText(
-  'blaq_knowledge_base',
+  'northbound_knowledge_base',
   'How does RAG technology work?',
   5
 );
 
 // Add new knowledge
-await zerodb.upsertVectors('blaq_knowledge_base', [
+await zerodb.upsertVectors('northbound_knowledge_base', [
   {
     id: 'new-topic',
     text: 'Detailed content about new topic...',
@@ -192,7 +192,7 @@ export async function searchKnowledge(query: string) {
   zerodb.setApiKey(process.env.NEXT_PUBLIC_AINATIVE_API_KEY!);
 
   const results = await zerodb.searchSimilarText(
-    'blaq_knowledge_base',
+    'northbound_knowledge_base',
     query,
     5
   );

@@ -7,7 +7,7 @@ This directory contains comprehensive documentation for all database systems use
 ## Documentation Files
 
 ### 1. KNOWLEDGE_BASE_COLLECTION.md
-**Purpose:** Complete technical specification for the `blaq_knowledge_base` vector collection
+**Purpose:** Complete technical specification for the `northbound_knowledge_base` vector collection
 
 **Contents:**
 - Collection configuration and architecture
@@ -81,13 +81,13 @@ import { zerodb } from '@/lib/zerodb';
 
 // Search knowledge base
 const results = await zerodb.searchSimilarText(
-  'blaq_knowledge_base',
+  'northbound_knowledge_base',
   'How does RAG work?',
   5
 );
 
 // Add new content
-await zerodb.upsertVectors('blaq_knowledge_base', [
+await zerodb.upsertVectors('northbound_knowledge_base', [
   {
     id: 'unique-id',
     text: 'Your content here...',
@@ -104,7 +104,7 @@ await zerodb.upsertVectors('blaq_knowledge_base', [
 ## Database Systems
 
 ### 1. Vector Database (ZeroDB)
-**Collection:** `blaq_knowledge_base`
+**Collection:** `northbound_knowledge_base`
 **Purpose:** Semantic search and RAG for AI chatbot
 **Technology:** OpenAI embeddings (text-embedding-3-small)
 **Dimensions:** 1536
@@ -193,7 +193,7 @@ await zerodb.upsertVectors('blaq_knowledge_base', [
 // Search similar text
 POST /v1/public/zerodb/vectors/search/text
 {
-  "collection_name": "blaq_knowledge_base",
+  "collection_name": "northbound_knowledge_base",
   "query_text": "your question",
   "top_k": 5
 }
@@ -201,7 +201,7 @@ POST /v1/public/zerodb/vectors/search/text
 // Upsert vectors
 POST /v1/public/zerodb/vectors/upsert
 {
-  "collection_name": "blaq_knowledge_base",
+  "collection_name": "northbound_knowledge_base",
   "vectors": [...]
 }
 ```
