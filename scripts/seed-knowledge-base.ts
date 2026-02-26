@@ -203,6 +203,204 @@ We prioritize speed to value while maintaining quality and security.`,
       category: 'business',
       keywords: ['timeline', 'how long', 'time frame', 'delivery', 'when', 'speed']
     }
+  },
+  {
+    id: 'founder-and-company-details',
+    text: `Northbound Studios was founded by Jerome Palencia on January 1, 2026.
+
+Location:
+- City: San Francisco, California
+- Business Address: 845 Howard St, San Francisco, CA 94103, United States
+
+Company Type:
+Northbound Studios is a Tech-Enabled Growth Studio based in San Francisco that designs and deploys AI-powered growth systems to help modern businesses attract demand, convert traffic, and scale revenue through intelligent infrastructure.
+
+Important Note:
+We are NOT a traditional marketing agency. We operate at the intersection of AI systems, performance marketing, conversion architecture, and strategic media production. Our work integrates technology, automation, and content into unified growth systems.`,
+    metadata: {
+      topic: 'founder and location',
+      category: 'about',
+      keywords: ['jerome palencia', 'founder', 'san francisco', 'location', 'address', 'where', 'founded']
+    }
+  },
+  {
+    id: 'company-philosophy-and-ethos',
+    text: `Northbound Studios Core Philosophy:
+
+Systems Over Tactics:
+Sustainable growth comes from infrastructure, not isolated campaigns.
+
+Performance Over Vanity Metrics:
+Impressions don't matter. Revenue does. We focus on measurable business outcomes.
+
+Clarity Over Noise:
+Strategy should be structured, measurable, and intentional.
+
+Technology as Leverage:
+AI and automation are tools to increase efficiency, precision, and scalability.
+
+Long-Term Compounding:
+Growth is engineered through disciplined optimization and iteration, not quick wins.
+
+Our goal is to convert attention into measurable business growth through intelligent systems.`,
+    metadata: {
+      topic: 'philosophy and values',
+      category: 'about',
+      keywords: ['philosophy', 'values', 'ethos', 'beliefs', 'principles', 'approach']
+    }
+  },
+  {
+    id: 'northbound-films-relationship',
+    text: `Relationship Between Northbound Studios and Northbound Films:
+
+Shared Founder:
+Both companies share the same founder, Jerome Palencia.
+
+Northbound Films:
+A film and media production company focused on cinematic storytelling and documentary work.
+
+Northbound Studios:
+A separate company focused on AI-powered growth systems, performance marketing, and digital infrastructure.
+
+Key Distinction:
+They share creative DNA but operate as distinct entities with different focuses. Northbound Films handles cinematic production while Northbound Studios builds growth infrastructure and AI systems.`,
+    metadata: {
+      topic: 'northbound films',
+      category: 'about',
+      keywords: ['northbound films', 'film', 'production', 'relationship', 'separate', 'distinct']
+    }
+  },
+  {
+    id: 'ai-native-agency-definition',
+    text: `What Is an AI-Native Agency?
+
+An AI-native agency is a company that integrates artificial intelligence into the core of its operations and client solutions.
+
+At Northbound Studios, being AI-native means:
+
+✓ AI is used in strategy development
+✓ AI assists in content production and repurposing
+✓ AI enhances targeting and optimization
+✓ AI powers automation and workflow systems
+✓ AI is embedded into client-facing products
+
+AI is not an add-on. It is part of the infrastructure.
+
+How Northbound Studios Operates as AI-Native:
+We combine human strategy + creative production + intelligent automation + data-driven optimization into unified growth systems. Every solution we build has AI integrated at the core, not bolted on as an afterthought.`,
+    metadata: {
+      topic: 'ai-native definition',
+      category: 'about',
+      keywords: ['ai-native', 'ai native', 'what is ai-native', 'ai agency', 'definition']
+    }
+  },
+  {
+    id: 'detailed-services-breakdown',
+    text: `Northbound Studios Core Services:
+
+1. AI App Development
+- AI-powered internal tools
+- Workflow automation systems
+- Client dashboards and portals
+- Intelligent CRM integrations
+
+2. Web Development
+- Conversion-optimized websites
+- Funnel architecture
+- Landing page systems
+- Technical SEO foundations
+
+3. Media + AI Systems
+- Strategic video production
+- AI-powered content repurposing
+- Funnel-aligned content strategy
+- Multi-platform deployment systems
+
+4. Ads + SEO
+- Meta Ads campaigns
+- YouTube Ads
+- Retargeting systems
+- YouTube SEO optimization
+- Search engine optimization
+- Performance tracking and attribution
+
+All services are designed to work together as integrated growth infrastructure, not isolated tactics.`,
+    metadata: {
+      topic: 'detailed services',
+      category: 'services',
+      keywords: ['services breakdown', 'what services', 'offerings', 'capabilities', 'ads', 'seo', 'web', 'ai apps']
+    }
+  },
+  {
+    id: 'chatbot-pricing-specific',
+    text: `Chatbot Project Pricing at Northbound Studios:
+
+Chatbot projects vary depending on scope and integration requirements.
+
+Typical Investment Ranges:
+
+Basic AI Chatbot Integration: $2,500 – $5,000
+- Simple FAQ bot
+- Basic knowledge base integration
+- Standard deployment
+
+Custom AI + Workflow Integration: $5,000 – $15,000
+- Custom training on your data
+- CRM integration
+- Workflow automation
+- Advanced conversation flows
+
+Advanced AI System with CRM + Automation: $15,000+
+- Full CRM integration
+- Complex workflow automation
+- Custom AI models
+- Multi-channel deployment
+- Advanced analytics
+
+Final pricing depends on:
+- Data integration complexity
+- CRM integration requirements
+- Automation depth
+- Custom workflows needed
+- Deployment environment
+
+All chatbot systems are designed to support business growth, not just answer FAQs. They're built as growth infrastructure, not customer service tools.`,
+    metadata: {
+      topic: 'chatbot pricing',
+      category: 'business',
+      keywords: ['chatbot cost', 'chatbot pricing', 'how much chatbot', 'chatbot price', 'bot cost']
+    }
+  },
+  {
+    id: 'social-media-and-contact',
+    text: `Connect with Northbound Studios:
+
+LinkedIn:
+https://www.linkedin.com/company/northboundstudios
+
+YouTube:
+https://www.youtube.com/@Northboundstudiosf
+
+Instagram:
+https://www.instagram.com/northboundstudios.co/
+
+Twitter (X):
+https://x.com/northbstudio?s=21
+
+Facebook:
+https://www.facebook.com/profile.php?id=61588099933872
+
+Business Address:
+845 Howard St
+San Francisco, CA 94103
+United States
+
+For project inquiries, visit our contact page at https://northboundstudio.co/contact`,
+    metadata: {
+      topic: 'social media and contact',
+      category: 'contact',
+      keywords: ['social media', 'linkedin', 'twitter', 'instagram', 'youtube', 'facebook', 'contact', 'connect']
+    }
   }
 ];
 
