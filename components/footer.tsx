@@ -6,6 +6,7 @@ const footerLinks = {
     { name: 'AI App Development', href: '/services/ai-apps' },
     { name: 'Web Development', href: '/services/web-dev' },
     { name: 'Media + AI Systems', href: '/services/media-ai' },
+    { name: 'Ads + SEO', href: '/ads-seo' },
   ],
   company: [
     { name: 'About', href: '/about' },
