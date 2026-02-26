@@ -6,28 +6,28 @@ import { Card, CardContent } from '@/components/ui/card';
 import { VideoBackground } from '@/components/video-background';
 
 export const metadata: Metadata = {
-  title: 'Northbound Studio | AI-Native Digital Media Agency for Black Entertainment',
-  description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
+  title: 'Northbound Studio | AI-Native Digital Media Agency',
+  description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the entertainment industry.',
   keywords: [
     'AI digital agency',
-    'Black-owned AI agency',
+    'AI-native agency',
     'AI development',
     'RAG chatbots',
     'custom AI applications',
     'AI media systems',
-    'Black entertainment tech',
+    'entertainment tech',
     'conversational AI',
     'AI-native agency',
     'intelligent media platforms',
-    'Black media technology',
+    'media technology',
     'AI consulting',
     'machine learning development',
     'AI entertainment solutions',
-    'Black-owned tech agency'
+    'AI-native tech agency'
   ],
   openGraph: {
-    title: 'Northbound Studio | AI-Native Digital Media Agency for Black Entertainment',
-    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
+    title: 'Northbound Studio | AI-Native Digital Media Agency',
+    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the entertainment industry.',
     url: 'https://northboundstudio.co',
     siteName: 'Northbound Studio',
     images: [
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Northbound Studio | AI-Native Digital Media Agency for Black Entertainment',
-    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
+    title: 'Northbound Studio | AI-Native Digital Media Agency',
+    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the entertainment industry.',
     images: ['/og-image.png'],
     creator: '@northboundstudio',
   },
@@ -72,7 +72,7 @@ function StructuredData() {
     name: 'Northbound Studio',
     url: 'https://northboundstudio.co',
     logo: 'https://northboundstudio.co/logo.png',
-    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
+    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the entertainment industry.',
     foundingDate: '2024',
     founder: {
       '@type': 'Person',
@@ -102,7 +102,7 @@ function StructuredData() {
       'RAG Chatbots',
       'Custom AI Applications',
       'Digital Media',
-      'Black Entertainment',
+      'Entertainment',
       'Conversational AI',
       'AI Development'
     ],
@@ -152,7 +152,7 @@ function StructuredData() {
     '@id': 'https://northboundstudio.co',
     name: 'Northbound Studio',
     image: 'https://northboundstudio.co/logo.png',
-    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
+    description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the entertainment industry.',
     url: 'https://northboundstudio.co',
     telephone: '+1-XXX-XXX-XXXX',
     email: 'hello@northboundstudio.co',
@@ -189,7 +189,7 @@ function StructuredData() {
     '@type': 'WebSite',
     name: 'Northbound Studio',
     url: 'https://northboundstudio.co',
-    description: 'AI-native digital agency building custom AI applications, RAG chatbots, and intelligent media systems for Black entertainment and media companies.',
+    description: 'AI-native digital agency building custom AI applications, RAG chatbots, and intelligent media systems for entertainment and media companies.',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
@@ -250,7 +250,7 @@ const differentiators = [
   {
     icon: Target,
     title: 'Culture-First',
-    description: 'Deep understanding of Black media, entertainment, and creator economy.',
+    description: 'Deep understanding of media, entertainment, and creator economy.',
   },
   {
     icon: Layers,
@@ -280,7 +280,7 @@ export default function Home() {
               We Don't Just Market Content
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-lg font-medium">
-              We build intelligent media systems at the intersection of entertainment, AI, and Black culture. Deploy Secure AI Solutions That Deliver Positive ROI Within Weeks, not months.
+              We build intelligent media systems at the intersection of entertainment, AI, and culture. Deploy Secure AI Solutions That Deliver Positive ROI Within Weeks, not months.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg h-12 px-8 shadow-xl">
@@ -342,7 +342,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="mb-4">What We Build</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Next-generation tools for the AI-native generation of Black media companies
+              Next-generation tools for the AI-native generation of media companies
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -393,7 +393,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <h2 className="mb-4">Experience AI in Action</h2>
               <p className="text-xl text-muted-foreground">
-                Try our RAG-powered chatbot trained on Black media and AI topics
+                Try our RAG-powered chatbot trained on media and AI topics
               </p>
             </div>
             <Card className="bg-card/50 border-border/50 overflow-hidden">

@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Northbound Studio',
     short_name: 'Northbound Studio',
-    description: 'AI-Native Digital Media Agency built at the intersection of entertainment, artificial intelligence, and Black culture. We build intelligent media systems.',
+    description: 'AI-Native Digital Media Agency built at the intersection of entertainment, artificial intelligence, and culture. We build intelligent media systems.',
     start_url: '/',
     scope: '/',
     display: 'standalone',

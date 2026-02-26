@@ -4,7 +4,7 @@ import { zerodb } from '../lib/zerodb';
 const knowledgeBase = [
   {
     id: 'what-does-northbound-studio-do',
-    text: `Northbound Studio is a hybrid studio at the intersection of AI, media, and Black culture. We build intelligent media systems - not just marketing content.
+    text: `Northbound Studio is a hybrid studio at the intersection of AI, media, and culture. We build intelligent media systems - not just marketing content.
 
 Our core offerings:
 - AI Apps: Custom AI applications built for your specific needs
@@ -12,7 +12,7 @@ Our core offerings:
 - Conversational Media: Interactive content experiences powered by AI
 - Web Platforms: Modern, high-performance web applications
 
-We're engineers who understand both culture and code. We build AI-native solutions from the ground up, with deep understanding of Black media, entertainment, and the creator economy.`,
+We're engineers who understand both culture and code. We build AI-native solutions from the ground up, with deep understanding of media, entertainment, and the creator economy.`,
     metadata: {
       topic: 'company overview',
       category: 'about',
@@ -88,12 +88,12 @@ Media + AI Systems:
 - Interactive content experiences
 - AI-enhanced media platforms
 - Tools for the creator economy
-- Black media and entertainment focus
+- media and entertainment focus
 
 Our Approach:
 - AI-native thinking (not AI-as-a-feature)
 - Engineering-led (not a traditional agency)
-- Culture-first (deep understanding of Black media)
+- Culture-first (deep understanding of media)
 - Ownership-driven (your IP, your data, your control)
 
 We deliver secure, compliant solutions with measurable business value within weeks.`,
@@ -109,7 +109,7 @@ We deliver secure, compliant solutions with measurable business value within wee
 
 AI-Native: We build with AI-first thinking from the ground up. AI isn't a feature we bolt on - it's fundamental to our architecture and approach.
 
-Culture-First: Deep understanding of Black media, entertainment, and the creator economy. We don't just build technology - we build culturally intelligent systems.
+Culture-First: Deep understanding of media, entertainment, and the creator economy. We don't just build technology - we build culturally intelligent systems.
 
 Ownership-Driven: Your intellectual property, your data, your control. We build for long-term value creation, not vendor lock-in.
 
@@ -120,7 +120,7 @@ Proven Results:
 - Fast ROI - measurable business value within weeks, not months
 - Award-winning track record with industry leaders
 
-We're a hybrid studio blending media, engineering, AI systems, and cultural intelligence to build the future of Black media.`,
+We're a hybrid studio blending media, engineering, AI systems, and cultural intelligence to build the future of media.`,
     metadata: {
       topic: 'differentiation',
       category: 'about',

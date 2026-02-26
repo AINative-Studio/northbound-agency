@@ -37,9 +37,9 @@ jest.mock('lucide-react', () => ({
 describe('Homepage Metadata', () => {
   describe('Basic Metadata', () => {
     it('should have proper page title optimized for SEO', () => {
-      expect(metadata.title).toBe('Northbound Studio | AI-Native Digital Media Agency for Black Entertainment');
+      expect(metadata.title).toBe('Northbound Studio | AI-Native Digital Media Agency');
       expect(metadata.title).toContain('AI-Native');
-      expect(metadata.title).toContain('Black Entertainment');
+      expect(metadata.title).toContain('Entertainment');
     });
 
     it('should have comprehensive meta description', () => {
@@ -47,7 +47,7 @@ describe('Homepage Metadata', () => {
       expect(metadata.description).toContain('AI-native digital agency');
       expect(metadata.description).toContain('custom AI applications');
       expect(metadata.description).toContain('RAG chatbots');
-      expect(metadata.description).toContain('Black entertainment');
+      expect(metadata.description).toContain('entertainment');
       expect((metadata.description as string).length).toBeLessThan(160);
     });
 
@@ -56,7 +56,7 @@ describe('Homepage Metadata', () => {
       expect(Array.isArray(metadata.keywords)).toBe(true);
       expect((metadata.keywords as string[]).length).toBeGreaterThan(0);
       expect(metadata.keywords).toContain('AI digital agency');
-      expect(metadata.keywords).toContain('Black-owned AI agency');
+      expect(metadata.keywords).toContain('AI-native agency');
       expect(metadata.keywords).toContain('RAG chatbots');
     });
 
@@ -87,7 +87,7 @@ describe('Homepage Metadata', () => {
   describe('OpenGraph Metadata', () => {
     it('should have complete OpenGraph configuration', () => {
       expect(metadata.openGraph).toBeDefined();
-      expect(metadata.openGraph?.title).toBe('Northbound Studio | AI-Native Digital Media Agency for Black Entertainment');
+      expect(metadata.openGraph?.title).toBe('Northbound Studio | AI-Native Digital Media Agency');
       expect(metadata.openGraph?.description).toContain('AI-native digital agency');
       expect(metadata.openGraph?.url).toBe('https://northboundstudio.co');
       expect(metadata.openGraph?.siteName).toBe('Northbound Studio');
@@ -113,7 +113,7 @@ describe('Homepage Metadata', () => {
     it('should have complete Twitter Card configuration', () => {
       expect(metadata.twitter).toBeDefined();
       expect(metadata.twitter?.card).toBe('summary_large_image');
-      expect(metadata.twitter?.title).toBe('Northbound Studio | AI-Native Digital Media Agency for Black Entertainment');
+      expect(metadata.twitter?.title).toBe('Northbound Studio | AI-Native Digital Media Agency');
       expect(metadata.twitter?.description).toContain('AI-native digital agency');
     });
 
@@ -369,7 +369,7 @@ describe('Homepage Content', () => {
   });
 
   it('should render the value proposition', () => {
-    expect(screen.getByText(/We build intelligent media systems at the intersection of entertainment, AI, and Black culture/i)).toBeInTheDocument();
+    expect(screen.getByText(/We build intelligent media systems at the intersection of entertainment, AI, and culture/i)).toBeInTheDocument();
   });
 
   it('should render call-to-action buttons', () => {

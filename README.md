@@ -1,6 +1,6 @@
 # Northbound Studio - AINative Reseller Platform
 
-A Next.js-based reseller platform for AINative services, targeting the Black entertainment industry. This platform enables resellers to offer AI-powered services including RAG chatbots, semantic search, multimodal AI APIs, and analytics to their clients.
+A Next.js-based reseller platform for AINative services, targeting the entertainment industry. This platform enables resellers to offer AI-powered services including RAG chatbots, semantic search, multimodal AI APIs, and analytics to their clients.
 
 ## Quick Start
 

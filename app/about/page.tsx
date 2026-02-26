@@ -6,13 +6,13 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'About Northbound Studio | AI-Native Agency Leadership & Expert Team',
-  description: 'Meet the AI-native digital studio at the intersection of AI, entertainment, and Black culture. Expert team in machine learning, RAG systems, full-stack development, and cultural intelligence serving media companies and creators worldwide.',
+  description: 'Meet the AI-native digital studio at the intersection of AI, entertainment, and culture. Expert team in machine learning, RAG systems, full-stack development, and cultural intelligence serving media companies and creators worldwide.',
   keywords: [
     'AI agency team',
     'AI experts',
     'machine learning engineers',
     'RAG system specialists',
-    'Black media technology',
+    'media technology',
     'artificial intelligence consulting',
     'media technology experts',
     'entertainment technology team',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'content intelligence specialists',
     'cultural intelligence AI',
     'AI-native studio',
-    'Black culture technology',
+    'culture technology',
     'AI development team',
     'digital transformation experts',
   ],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'About Northbound Studio | AI-Native Agency Leadership & Expert Team',
-    description: 'Expert team specializing in AI systems engineering, RAG development, full-stack development, and cultural intelligence for Black media companies and creators. Building the future of intelligent media.',
+    description: 'Expert team specializing in AI systems engineering, RAG development, full-stack development, and cultural intelligence for media companies and creators. Building the future of intelligent media.',
     type: 'website',
     url: '/about',
     siteName: 'Northbound Studio',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'About Northbound Studio | AI-Native Agency Leadership & Expert Team',
-    description: 'Expert team specializing in AI systems engineering, RAG development, full-stack development, and cultural intelligence for Black media companies and creators.',
+    description: 'Expert team specializing in AI systems engineering, RAG development, full-stack development, and cultural intelligence for media companies and creators.',
     creator: '@northboundstudio',
   },
 };
@@ -65,7 +65,7 @@ const values = [
   {
     icon: Heart,
     title: 'Culture-First Approach',
-    description: 'Deep respect and understanding of Black culture, media, and the unique challenges of ownership and representation.',
+    description: 'Deep respect and understanding of culture, media, and the unique challenges of ownership and representation.',
   },
   {
     icon: Code,
@@ -102,7 +102,7 @@ export default function AboutPage() {
       height: '600',
     },
     image: 'https://northboundstudio.co/logo.png',
-    description: 'Next-generation digital studio built at the intersection of artificial intelligence, entertainment, and Black culture. We build intelligent media systems for Black media companies and creators.',
+    description: 'Next-generation digital studio built at the intersection of artificial intelligence, entertainment, and culture. We build intelligent media systems for media companies and creators.',
     foundingDate: '2024',
     slogan: 'Building the future of media, entertainment, and culture through intelligent systems',
     email: 'hello@ainative.studio',
@@ -151,7 +151,7 @@ export default function AboutPage() {
       'Natural Language Processing',
       'Digital Media',
       'Entertainment Technology',
-      'Black Media',
+      'Media',
       'Cultural Intelligence',
       'Full-Stack Development',
       'AI Application Development',
@@ -228,8 +228,8 @@ export default function AboutPage() {
       {
         '@type': 'Organization',
         name: 'Cultural Intelligence',
-        description: 'Team bringing deep understanding of Black media, entertainment, and cultural nuances',
-        expertise: ['Black Media', 'Entertainment Industry', 'Content Strategy', 'Cultural Consulting'],
+        description: 'Team bringing deep understanding of media, entertainment, and cultural nuances',
+        expertise: ['Media', 'Entertainment Industry', 'Content Strategy', 'Cultural Consulting'],
       },
       {
         '@type': 'Organization',
@@ -256,10 +256,10 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto space-y-8">
             <h1>About Northbound Studio</h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              We're a next-generation digital studio built at the intersection of <span className="text-foreground font-semibold">artificial intelligence</span>, <span className="text-foreground font-semibold">entertainment</span>, and <span className="text-foreground font-semibold">Black culture</span>.
+              We're a next-generation digital studio built at the intersection of <span className="text-foreground font-semibold">artificial intelligence</span>, <span className="text-foreground font-semibold">entertainment</span>, and <span className="text-foreground font-semibold">culture</span>.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Founded to serve the AI-native generation of Black media companies, we bring together engineering excellence, cultural intelligence, and deep expertise in AI systems. We're not a traditional agency — we're a hybrid studio that understands both the technical complexities of AI and the cultural nuances of Black media and entertainment.
+              Founded to serve the AI-native generation of media companies, we bring together engineering excellence, cultural intelligence, and deep expertise in AI systems. We're not a traditional agency — we're a hybrid studio that understands both the technical complexities of AI and the cultural nuances of media and entertainment.
             </p>
           </div>
         </div>
@@ -271,7 +271,7 @@ export default function AboutPage() {
             <div className="text-center mb-16">
               <h2 className="mb-4">Our Mission</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                To empower Black media companies and creators with intelligent systems that amplify their voice, scale their impact, and secure their ownership in the AI era.
+                To empower media companies and creators with intelligent systems that amplify their voice, scale their impact, and secure their ownership in the AI era.
               </p>
             </div>
 
@@ -287,7 +287,7 @@ export default function AboutPage() {
                       The future of media is intelligent, conversational, and personalized. AI isn't coming — it's here. The companies that win will be those who integrate AI into their core operations, not as a feature, but as a fundamental part of how they create, distribute, and monetize content.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      Black media companies shouldn't be left behind in this transformation. We exist to ensure they're not just participants, but leaders in the AI-powered media landscape.
+                      Media companies shouldn't be left behind in this transformation. We exist to ensure they're not just participants, but leaders in the AI-powered media landscape.
                     </p>
                   </div>
                   <div className="space-y-4">
@@ -298,7 +298,7 @@ export default function AboutPage() {
                     <ul className="space-y-3 text-muted-foreground">
                       <li className="flex items-start gap-2">
                         <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        Black media companies and entertainment brands
+                        media companies and entertainment brands
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />

@@ -438,7 +438,7 @@ async function setupRAGCollection() {
 Topics to include in knowledge base:
 - Northbound Studio services (AI Apps, RAG Bots, Conversational Media, Web Platforms)
 - Company differentiators (AI-Native, Culture-First, Ownership-Driven, Engineering-Led)
-- AI and Black media industry knowledge
+- AI and media industry knowledge
 - Technical capabilities (Next.js, React, TypeScript, AI/ML)
 - Contact and engagement processes
 

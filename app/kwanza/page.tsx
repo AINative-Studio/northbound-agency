@@ -88,7 +88,7 @@ export default function KwanzaPage() {
             </div>
             <h1 className="text-gradient">Kwanza</h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              A citation-first AI platform for cultural preservation. Built on the principles of Kwanzaa (Nguzo Saba), delivering trustworthy AI systems for the Black media and entertainment community.
+              A citation-first AI platform for cultural preservation. Built on the principles of Kwanzaa (Nguzo Saba), delivering trustworthy AI systems for the media and entertainment community.
             </p>
             <p className="text-lg text-muted-foreground/80">
               A collaborative project by <span className="text-primary font-semibold">AINative Studio</span>, <span className="text-primary font-semibold">Northbound Studio</span>, and <span className="text-primary font-semibold">Kwanza Hall</span>.
@@ -230,7 +230,7 @@ export default function KwanzaPage() {
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">Join the Cultural AI Revolution</h2>
             <p className="text-xl text-muted-foreground">
-              Kwanza is building the future of trustworthy AI for Black media and entertainment. Get early access and help shape the platform.
+              Kwanza is building the future of trustworthy AI for media and entertainment. Get early access and help shape the platform.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg h-12 px-8">

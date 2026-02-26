@@ -220,7 +220,7 @@ Strategic keyword targeting for all service pages to maximize SEO visibility and
 ### Differentiation Keywords
 - "AI-native web development"
 - "Media + AI systems"
-- "Black media technology"
+- "media technology"
 - "Entertainment AI solutions"
 - "ZeroDB integration"
 - "AIKit UI development"
@@ -337,7 +337,7 @@ Each offer description includes relevant keywords naturally:
 - "ZeroDB development"
 - "AIKit UI implementation"
 - "Entertainment AI solutions"
-- "Black media technology"
+- "media technology"
 
 ### Blue Ocean Keywords
 - "Conversational media experiences"

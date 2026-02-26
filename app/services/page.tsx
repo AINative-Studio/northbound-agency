@@ -352,7 +352,7 @@ export default function ServicesPage() {
                 </div>
                 <h3 className="text-xl font-semibold">Culture-First</h3>
                 <p className="text-muted-foreground">
-                  Deep understanding of Black media and entertainment
+                  Deep understanding of media and entertainment
                 </p>
               </div>
               <div className="text-center space-y-3">

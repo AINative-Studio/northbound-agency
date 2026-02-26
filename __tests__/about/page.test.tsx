@@ -5,7 +5,7 @@ describe('AboutPage Metadata', () => {
   it('should have comprehensive SEO metadata', () => {
     expect(metadata.title).toBe('About Northbound Studio | AI-Native Agency Leadership');
     expect(metadata.description).toContain('AI');
-    expect(metadata.description).toContain('Black culture');
+    expect(metadata.description).toContain('culture');
     expect(metadata.description?.length).toBeGreaterThan(120);
     expect(metadata.description?.length).toBeLessThan(160);
   });

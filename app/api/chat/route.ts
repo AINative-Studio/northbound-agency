@@ -83,7 +83,7 @@ async function generateChatCompletion(
           messages: [
             {
               role: 'system',
-              content: `You are Cody, a helpful and knowledgeable AI assistant for Northbound Studio. We operate from Los Angeles (HQ), San Francisco (Tech Hub), and Atlanta (Black entertainment capital focus). You provide accurate, professional, and friendly answers about our AI development services, RAG systems, and web development solutions. Use the following context to answer the user's question:\n\n${context}`,
+              content: `You are Cody, a helpful and knowledgeable AI assistant for Northbound Studio. We operate from Los Angeles (HQ), San Francisco (Tech Hub), and Atlanta (entertainment hub). You provide accurate, professional, and friendly answers about our AI development services, RAG systems, and web development solutions. Use the following context to answer the user's question:\n\n${context}`,
             },
             {
               role: 'user',
@@ -130,14 +130,14 @@ async function generateResponse(message: string, type: string): Promise<{
     'location': `Northbound Studio operates across three strategic locations:
 - **Headquarters**: Los Angeles, California - Business operations and client relations
 - **Tech Hub**: San Francisco, California - Engineering and AI development team
-- **Atlanta Office**: Atlanta, Georgia - The Black entertainment capital of the world, our ground operations and cultural innovation center
+- **Atlanta Office**: Atlanta, Georgia - The major entertainment hub, our ground operations and cultural innovation center
 
 We serve clients globally with our AI-powered solutions and web development services.`,
 
     'contact': `You can reach Northbound Studio at:
 - **HQ**: Los Angeles, California
 - **Tech Hub**: San Francisco, California
-- **Atlanta Office**: Atlanta, Georgia (Black entertainment capital focus)
+- **Atlanta Office**: Atlanta, Georgia (entertainment hub)
 - **Website**: https://northboundstudios.co
 - **Services**: AI chatbots, web development, conversational media + AI
 - **Contact**: Fill out our contact form for project inquiries and consultations`,
@@ -203,7 +203,7 @@ With Chat Completion + ZeroDB Vector Search:
 • Fan engagement chatbots for entertainment brands
 • Cultural archive preservation with citation tracking
 
-With our Atlanta office in the Black entertainment capital, we specialize in AI that **amplifies culture, not exploits it**. We'll help you build production-ready media apps in weeks, not months.`,
+With our Atlanta office in a major entertainment hub, we specialize in AI that **amplifies culture, not exploits it**. We'll help you build production-ready media apps in weeks, not months.`,
 
     'pricing': `Our pricing is project-based and depends on complexity, timeline, and required features. Typical AI chatbot projects range from $15K-$50K. We focus on fast ROI - most clients see value within weeks, not months. Contact us for a detailed quote tailored to your needs.`,
 
@@ -219,12 +219,12 @@ We work in agile sprints and aim for early value delivery - you'll see working p
 - **Culture-First**: We care deeply about creating inclusive, human-centered technology
 - **Ownership-Driven**: We treat your project like our own product
 - **Engineering-Led**: Our team consists of experienced engineers, not just prompt engineers
-- **Multi-Location Excellence**: LA HQ for business, SF tech hub for engineering, Atlanta for cultural innovation in the Black entertainment capital`,
+- **Multi-Location Excellence**: LA HQ for business, SF tech hub for engineering, Atlanta for cultural innovation and entertainment`,
 
     'team': `Northbound Studio is led by experienced engineers who are passionate about AI and building production-ready solutions. Our team operates across three strategic locations:
 - **Los Angeles HQ**: Business operations and client relations
 - **San Francisco Tech Hub**: AI development and engineering team
-- **Atlanta Office**: Ground operations in the Black entertainment capital of the world
+- **Atlanta Office**: Ground operations in a major entertainment hub
 
 We combine deep technical expertise with a culture-first philosophy, treating every project like our own product. We work with clients globally.`,
   };

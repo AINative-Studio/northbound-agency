@@ -220,7 +220,7 @@ export default function ResellerDashboard() {
                   Welcome back, {user?.username || 'Partner'}!
                 </h2>
                 <p className="text-muted-foreground">
-                  Manage your AINative-powered services for the Black entertainment industry
+                  Manage your AINative-powered services for the entertainment industry
                 </p>
               </div>
               <TrendingUp className="h-16 w-16 text-primary opacity-20" />
@@ -484,7 +484,7 @@ export default function ResellerDashboard() {
             🤖 Built by AINative Studio | ⚡ All Data Services Built on ZeroDB
           </p>
           <p className="mt-2">
-            Reselling AI services to the Black entertainment industry
+            Reselling AI services to the entertainment industry
           </p>
         </div>
       </main>

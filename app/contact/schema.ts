@@ -36,7 +36,7 @@ export const localBusinessSchema = {
   '@id': 'https://northboundstudio.co',
   name: 'Northbound Studio',
   image: 'https://northboundstudio.co/logo.png',
-  description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the Black entertainment industry.',
+  description: 'Leading AI-native digital agency specializing in custom AI applications, RAG chatbots, and intelligent media systems for the entertainment industry.',
   url: 'https://northboundstudio.co',
   email: 'hello@ainative.studio',
   address: {
