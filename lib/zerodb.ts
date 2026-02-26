@@ -53,15 +53,15 @@ class ZeroDBClient {
   // Table Operations
   async insertTable<T>(tableName: string, data: T): Promise<any> {
     const response = await this.client.post(
-      `/v1/public/zerodb/tables/${tableName}/insert`,
-      { rows: [data] }
+      `/v1/projects/${this.projectId}/database/tables/${tableName}/rows`,
+      { row_data: data }
     );
     return response.data;
   }
 
   async queryTable(tableName: string, filter?: any): Promise<any> {
     const response = await this.client.post(
-      `/v1/public/zerodb/tables/${tableName}/query`,
+      `/v1/projects/${this.projectId}/database/tables/${tableName}/query`,
       { filter, limit: 100 }
     );
     return response.data;
@@ -145,5 +145,15 @@ export const zerodb = new ZeroDBClient();
 // Initialize with API key from environment
 if (typeof window !== 'undefined') {
   // Client-side: use public API key
-  zerodb.setApiKey(process.env.NEXT_PUBLIC_AINATIVE_API_KEY!);
+  if (process.env.NEXT_PUBLIC_AINATIVE_API_KEY) {
+    zerodb.setApiKey(process.env.NEXT_PUBLIC_AINATIVE_API_KEY);
+  }
+} else {
+  // Server-side: use private API key (prioritize ZERODB_API_TOKEN)
+  const serverApiKey = process.env.ZERODB_API_TOKEN ||
+                       process.env.AINATIVE_API_KEY ||
+                       process.env.NEXT_PUBLIC_AINATIVE_API_KEY;
+  if (serverApiKey) {
+    zerodb.setApiKey(serverApiKey);
+  }
 }

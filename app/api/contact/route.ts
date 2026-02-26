@@ -294,7 +294,7 @@ export async function POST(request: NextRequest) {
         submitted_at: timestamp,
       });
 
-      console.log('[Contact API] Submission stored in ZeroDB:', dbResult.rows[0]?.id);
+      console.log('[Contact API] Submission stored in ZeroDB:', dbResult.row_id || dbResult.id);
     } catch (dbError) {
       console.error('[Contact API] ZeroDB insertion failed:', dbError);
       return NextResponse.json(
@@ -314,7 +314,7 @@ export async function POST(request: NextRequest) {
       {
         success: true,
         data: {
-          id: dbResult.rows[0]?.id,
+          id: dbResult.row_id || dbResult.id,
           name: formData.name,
           email: formData.email,
           email_sent: emailResult.success,

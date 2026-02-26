@@ -8,7 +8,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 // import { Progress } from '@/components/ui/progress';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { zerodb } from '@/lib/zerodb';
 
 interface FormData {
   name: string;
@@ -111,21 +110,33 @@ export default function MultiStepContactForm({ onClose }: MultiStepContactFormPr
     setError('');
 
     try {
-      await zerodb.insertTable('contact_submissions', {
-        name: formData.name,
-        company: formData.company || null,
-        email: formData.email,
-        ai_workflow: formData.ai_workflow,
-        has_project: formData.has_project,
-        project_description: formData.project_description || null,
-        service_preference: formData.service_preference,
-        submitted_at: new Date().toISOString(),
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          company: formData.company || null,
+          email: formData.email,
+          ai_workflow: formData.ai_workflow,
+          has_project: formData.has_project,
+          project_description: formData.project_description || null,
+          service_preference: formData.service_preference,
+        }),
       });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit form');
+      }
 
       setIsSuccess(true);
     } catch (err) {
-      setError('Something went wrong. Please try again.');
-      console.error(err);
+      const errorMessage = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+      setError(errorMessage);
+      console.error('[Form Submission Error]', err);
     } finally {
       setIsSubmitting(false);
     }
