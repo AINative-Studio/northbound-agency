@@ -109,10 +109,9 @@ export default function AdsSEOPage() {
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
-                <Zap className="h-4 w-4" />
-                <span className="text-sm font-medium">Performance Acceleration</span>
-              </div>
+              <p className="text-sm font-medium text-muted-foreground mb-6">
+                Performance Acceleration
+              </p>
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Turn Attention Into Measurable Growth
@@ -134,14 +133,9 @@ export default function AdsSEOPage() {
                 </Button>
               </div>
 
-              <div className="inline-block p-6 bg-card border border-border rounded-lg">
-                <p className="text-lg font-semibold text-foreground mb-2">
-                  Clicks don't grow businesses.
-                </p>
-                <p className="text-xl text-primary font-bold">
-                  Conversion systems do.
-                </p>
-              </div>
+              <p className="text-xl md:text-2xl text-muted-foreground">
+                Clicks don't grow businesses. <span className="text-foreground font-semibold">Conversion systems do.</span>
+              </p>
             </div>
           </div>
         </section>
